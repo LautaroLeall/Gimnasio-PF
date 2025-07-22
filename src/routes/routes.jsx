@@ -1,7 +1,10 @@
+// src/routes/routes.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SobreNosotros from '../components/SobreNosotros';
 import NavBar from '../components/NavBar';
+import Sedes from '../components/Sedes';
+import Coaches from '../components/Coaches';
 import Carousel from '../components/Carousel';
+import SobreNosotros from '../components/SobreNosotros';
 
 const AppRoutes = (props) => {
     const {
@@ -35,6 +38,8 @@ const AppRoutes = (props) => {
                 <NavBar />
                 <Routes>
                     <Route path="/" element={renderCarousel("inicio")} />
+                    <Route path="/sedes" element={<Sedes />} />
+                    <Route path="/coaches" element={<Coaches />} />
                     <Route path="/formulario" element={renderCarousel("formulario")} />
                     <Route path="/tabla" element={renderCarousel("tabla")} />
                     <Route path="/sobre-nosotros" element={<SobreNosotros />} />

@@ -1,3 +1,4 @@
+// src/components/SobreNosotros.jsx
 import React from 'react';
 import '../styles/SobreNosotros.css';
 import sobreNosotros from '/public/sobre-nosotros.jpg';
