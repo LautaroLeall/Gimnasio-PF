@@ -1,3 +1,4 @@
+// src/components/Form.jsx
 import { useState, useEffect } from 'react';
 import '../styles/Form.css';
 import Swal from 'sweetalert2';

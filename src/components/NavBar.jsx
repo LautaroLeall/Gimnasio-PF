@@ -1,3 +1,4 @@
+// src/components/NavBar.jsx
 import { useNavigate } from 'react-router-dom';
 import '../styles/Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +8,7 @@ const NavBar = () => {
     const navigate = useNavigate();
 
     return (
-        <nav className="navbar navbar-dark navbar-expand-lg mx-5 px-5">
+        <nav className="navbar navbar-dark navbar-expand-lg mx-5">
             <h1 className="navbar-brand" id="logo" onClick={() => navigate('/')}>
                 <span>GYM</span>NASIO
             </h1>
@@ -26,7 +27,21 @@ const NavBar = () => {
 
             <div className="collapse navbar-collapse" id="navbarNav">
                 <div className="container-btn d-flex flex-lg-row flex-column align-items-lg-center w-100">
-                    <div className="container-btn d-flex gap-3 flex-column flex-lg-row align-items-lg-center w-100 justify-content-lg-center">
+                    <div className="container-btn d-flex gap-5 flex-column flex-lg-row align-items-lg-center w-100 justify-content-lg-center">
+                        <button
+                            className="btn btn-outline-secondary"
+                            id="boton1"
+                            onClick={() => navigate('/sedes')}
+                        >
+                            Sedes
+                        </button>
+                        <button
+                            className="btn btn-outline-secondary"
+                            id="boton1"
+                            onClick={() => navigate('/coaches')}
+                        >
+                            Entrenadores
+                        </button>
                         <button
                             className="btn btn-outline-secondary"
                             id="boton1"
@@ -36,7 +51,7 @@ const NavBar = () => {
                         </button>
                         <button
                             className="btn btn-outline-secondary"
-                            id="boton2"
+                            id="boton1"
                             onClick={() => navigate('/tabla')}
                         >
                             Ver los turnos
