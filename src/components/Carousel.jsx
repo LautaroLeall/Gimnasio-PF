@@ -1,3 +1,4 @@
+// src/components/Carousel.jsx
 import { useRef, useEffect } from 'react';
 import HorariosGym from './HorariosGym';
 import Form from './Form';

@@ -1,3 +1,4 @@
+// src/components/HorariosGym.jsx
 import '../styles/Horariosgym.css';
 
 const HorariosGym = () => {
