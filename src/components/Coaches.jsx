@@ -31,7 +31,7 @@ const Coaches = () => {
                 setSlideIndex(0);
                 setMostrarCards(true);
                 setFiltroPendiente(null);
-            }, 600); // Tiempo para animar salida (fade+zoom)
+            }, 500); // Tiempo para animar salida (fade+zoom)
             return () => clearTimeout(timeout);
         }
     }, [mostrarCards, filtroPendiente]);
