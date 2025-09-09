@@ -8,6 +8,11 @@ import Sedes from '../components/Sedes';
 import Coaches from '../components/Coaches';
 import SobreNosotros from '../components/SobreNosotros';
 import LandingPage from '../components/LandingPage';
+import Planes from '../components/Planes';
+import BannerHome from '../components/BannerHome';
+import Footer from '../components/Footer';
+import BannerPlanes from '../components/BannerPlanes';
+
 
 const AppRoutes = (props) => {
     const {
@@ -53,6 +58,10 @@ const AppRoutes = (props) => {
                 <Route path="/formulario" element={renderCarousel("formulario")} />
                 <Route path="/tabla" element={renderCarousel("tabla")} />
                 <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+                <Route path="/planes" element={<Planes />} />
+                <Route path="/bannerHome" element={<BannerHome />} />
+                <Route path="/footer" element={<Footer />} />
+                <Route path="/bannerplanes" element={<BannerPlanes />} />
             </Route>
 
         </Routes>

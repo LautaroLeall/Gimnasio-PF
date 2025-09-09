@@ -1,0 +1,101 @@
+/* Footer.css */
+
+.footer-container {
+  background-color: #111; /* Un gris muy oscuro para el footer */
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Centrado vertical del logo */
+  min-width: 100px;
+}
+
+.footer-logo {
+  height:15rem; /* Ajusta el tamaño del logo si es necesario */
+}
+
+.footer-links-section {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-column {
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 2px solid #3fc91c; /* Línea roja para resaltar los títulos */
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #3fc91c; /* Efecto hover en los enlaces */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo-section {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  .footer-links-section {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
