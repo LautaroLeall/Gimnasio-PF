@@ -1,0 +1,111 @@
+:root {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #00bcd4; /* Azul cian */
+  --button-hover-color: #0097a7;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  padding: 8rem 2rem; /* Aumenta el padding para dar más espacio */
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen de fondo del banner */
+.banner-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1574680096145-af07c6b44a86?q=80&w=2670&auto=format&fit=crop'); /* Puedes usar la misma imagen del gimnasio o una diferente */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3) blur(2px); /* Más oscuro y ligeramente desenfocado */
+  z-index: 0; /* Detrás del contenido */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1; /* Encima del fondo */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-size: 3.5rem; /* Tamaño grande para el título */
+  font-weight: 900; /* Extra bold */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.banner-title .highlight {
+  color: var(--primary-color);
+}
+
+.banner-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #c0c0c0;
+}
+
+.banner-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 1.2rem 2.5rem; /* Padding generoso */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banner-button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  .banner-description {
+    font-size: 1rem;
+  }
+  .banner-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .banner-container {
+    padding: 6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  .banner-description {
+    font-size: 0.9rem;
+  }
+  .banner-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
