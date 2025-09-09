@@ -1,6 +1,8 @@
 // src/components/Coaches.jsx
 import Slider from "react-slick";
 import { useState, useRef, useEffect } from "react";
+import NavBar from './NavBar';
+import Banner from './Banner';
 import "../styles/Coaches.css";
 import coachesData from "../api/coachesData";
 
@@ -57,6 +59,7 @@ const Coaches = () => {
 
     return (
         <>
+            <NavBar />
             {/* Texto y filtros */}
             <div className="container-fluid text-white mt-5">
                 {/* Textos principales */}
@@ -137,6 +140,7 @@ const Coaches = () => {
                     </div>
                 )}
             </div>
+            <Banner />
         </>
     );
 };

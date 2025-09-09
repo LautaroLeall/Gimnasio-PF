@@ -1,8 +1,10 @@
 // src/components/Carousel.jsx
 import { useRef, useEffect } from 'react';
+import NavBar from './NavBar';
 import HorariosGym from './HorariosGym';
 import Form from './Form';
 import PartnersTable from './PartnersTable';
+import NavbarBotton from './NavbarBotton';
 import '../styles/Carousel.css';
 
 // Componente principal llamado Carousel
@@ -43,57 +45,63 @@ const Carousel = ({
 
     // Renderizado del componente
     return (
-        <section className="contenedor-carousel"> {/* Contenedor principal del carrusel */}
+        <>
+            <NavBar />
+            <section className="contenedor-carousel"> {/* Contenedor principal del carrusel */}
 
-            {/* Sección con efecto parallax de bienvenida */}
-            <section className="parallax-1">
-                <div className="parallax-inner">
-                    <h1 className="title-img">Bienvenidos a Nuestro Gimnasio</h1>
-                </div>
-            </section>
+                {/* Sección con efecto parallax de bienvenida */}
+                <section className="parallax-1">
+                    <div className="parallax-inner">
+                        <h1 className="title-img">Bienvenidos a Nuestro Gimnasio</h1>
+                    </div>
+                </section>
 
-            {/* Sección de horarios del gimnasio */}
-            <section>
-                <HorariosGym />
-            </section>
+                {/* Sección de horarios del gimnasio */}
+                <section>
+                    <HorariosGym />
+                </section>
 
-            {/* Sección con efecto parallax antes del formulario */}
-            <section className="parallax-2">
-                <div className="parallax-inner">
-                    <h1 className="title-img">Registrar Turnos</h1>
-                </div>
-            </section>
+                {/* Sección con efecto parallax antes del formulario */}
+                <section className="parallax-2">
+                    <div className="parallax-inner">
+                        <h1 className="title-img">Registrar Turnos</h1>
+                    </div>
+                </section>
 
-            {/* Sección del formulario con referencia para hacer scroll */}
-            <section className="form" ref={formRef}>
-                <Form
-                    agregarSocio={agregarSocio}
-                    socioEditado={socioEditado}
-                    actualizarSocio={actualizarSocio}
-                    modoEdicion={modoEdicion}
-                    cancelarEdicion={cancelarEdicion}
-                    socios={socios}
-                    scrollToTabla={scrollToTabla} // Permite que el formulario haga scroll hacia la tabla
-                />
-            </section>
+                {/* Sección del formulario con referencia para hacer scroll */}
+                <section className="form" ref={formRef}>
+                    <Form
+                        agregarSocio={agregarSocio}
+                        socioEditado={socioEditado}
+                        actualizarSocio={actualizarSocio}
+                        modoEdicion={modoEdicion}
+                        cancelarEdicion={cancelarEdicion}
+                        socios={socios}
+                        scrollToTabla={scrollToTabla} // Permite que el formulario haga scroll hacia la tabla
+                    />
+                </section>
 
-            {/* Sección con efecto parallax antes de la tabla */}
-            <section className="parallax-3">
-                <div className="parallax-inner">
-                    <h1 className="title-img">Ver Turnos</h1>
-                </div>
-            </section>
+                {/* Sección con efecto parallax antes de la tabla */}
+                <section className="parallax-3">
+                    <div className="parallax-inner">
+                        <h1 className="title-img">Ver Turnos</h1>
+                    </div>
+                </section>
 
-            {/* Sección de la tabla con referencia para hacer scroll */}
-            <section className="table" ref={tablaRef}>
-                <PartnersTable
-                    socios={socios}
-                    eliminarSocio={eliminarSocio}
-                    editarSocio={editarSocio}
-                    scrollToForm={scrollToForm} // Permite que la tabla haga scroll hacia el formulario
-                />
+                {/* Sección de la tabla con referencia para hacer scroll */}
+                <section className="table" ref={tablaRef}>
+                    <PartnersTable
+                        socios={socios}
+                        eliminarSocio={eliminarSocio}
+                        editarSocio={editarSocio}
+                        scrollToForm={scrollToForm} // Permite que la tabla haga scroll hacia el formulario
+                    />
+                </section>
             </section>
-        </section>
+            <section className='navbar-bottom d-flex justify-content-center align-items-center'>
+                <NavbarBotton />
+            </section>
+        </>
     );
 };
 
