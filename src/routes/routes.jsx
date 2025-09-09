@@ -5,6 +5,8 @@ import Sedes from '../components/Sedes';
 import Coaches from '../components/Coaches';
 import Carousel from '../components/Carousel';
 import SobreNosotros from '../components/SobreNosotros';
+import Login from '../components/Login';
+import Register from '../components/Register';
 
 const AppRoutes = (props) => {
     const {
@@ -43,6 +45,9 @@ const AppRoutes = (props) => {
                     <Route path="/formulario" element={renderCarousel("formulario")} />
                     <Route path="/tabla" element={renderCarousel("tabla")} />
                     <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/banner" element={<Banner />} />
                 </Routes>
         </BrowserRouter>
     );
