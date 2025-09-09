@@ -1,64 +1,26 @@
-:root {
-  --background-color: #121212;
-  --form-bg-color: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
-  --text-color: #e0e0e0;
-  --input-bg-color: rgba(255, 255, 255, 0.1);
-  --button-color: #00bcd4; /* Un azul cian que resalta */
-  --button-hover-color: #0097a7;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* src/styles/Login.css */
 .login-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--background-color);
-  overflow: hidden; /* Para evitar desbordamiento de la imagen */
-}
-
-/* Imagen de fondo con efecto */
-.login-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300d3a48?q=80&w=2940&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(8px) brightness(0.4) opacity(0.5); /* Desenfoque, oscuridad y opacidad */
-  z-index: 1; /* Para que esté detrás de la caja de inicio de sesión */
+  background-color: #121212;
+  overflow: hidden;
 }
 
 /* Caja del formulario de inicio de sesión */
 .login-box {
-  position: relative;
-  z-index: 2; /* Para que esté encima de la imagen */
-  background: var(--form-bg-color);
+  background: rgba(255, 255, 255, 0.05);
   padding: 3rem;
+  margin: 0 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px); /* Efecto de cristal esmerilado */
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  max-width: 400px;
-  width: 90%;
+  max-width: 500px;
 }
 
 .login-title {
-  color: var(--text-color);
+  color: #10db2b;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
@@ -72,7 +34,7 @@ body {
 
 .login-form label {
   display: block;
-  color: var(--text-color);
+  color: #7a9273;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -80,18 +42,18 @@ body {
 .login-form input {
   width: 100%;
   padding: 1rem;
-  background: var(--input-bg-color);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  color: var(--text-color);
+  color: #e0e0e0;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 .login-form input:focus {
   outline: none;
-  border-color: var(--button-color);
-  box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+  border-color: #10db2b;
+  box-shadow: 0 0 0 2px rgba(16, 219, 43, 0.1);
 }
 
 .login-button {
@@ -99,45 +61,31 @@ body {
   padding: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: var(--button-color);
-  color: var(--background-color);
+  background-color: rgba(16, 219, 43, 0.1);
+  color: #7a9273;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .login-button:hover {
-  background-color: var(--button-hover-color);
+  color: #213725;
+  background-color: rgba(16, 219, 43, 0.3);
 }
 
-.login-forgot-password {
+.register-link {
   margin-top: 1.5rem;
 }
 
-.login-forgot-password a {
-  color: var(--button-color);
+.register-link a {
+  color: #7a9273;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.login-forgot-password a:hover {
-  color: var(--text-color);
-}
-
-/* Efecto de reflejo de la imagen */
-.image-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%; /* La mitad inferior del contenedor */
-  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300d3a48?q=80&w=2940&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  z-index: 0; /* Detrás de todo */
-  transform: scaleY(-1); /* Voltear verticalmente */
-  filter: blur(10px) brightness(0.2) opacity(0.3); /* Similar al original, pero más sutil */
-  mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+.register-link a:hover {
+  color: #10db2b;
+  text-shadow: 0 0 0 5px rgba(16, 219, 43, 0.5);
 }
