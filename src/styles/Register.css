@@ -1,55 +1,26 @@
-:root {
-  --background-color: #121212;
-  --form-bg-color: rgba(255, 255, 255, 0.05);
-  --text-color: #e0e0e0;
-  --input-bg-color: rgba(255, 255, 255, 0.1);
-  --button-color: #00bcd4; /* Mismo azul cian */
-  --button-hover-color: #0097a7;
-}
-
+/* src/styles/Register.css */
 .register-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--background-color);
+  background-color: #121212;
   overflow: hidden;
-}
-
-/* Imagen de fondo con efecto (la misma que en Login.css para consistencia) */
-.register-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300d3a48?q=80&w=2940&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(8px) brightness(0.4) opacity(0.5);
-  z-index: 1;
 }
 
 /* Caja del formulario de registro */
 .register-box {
-  position: relative;
-  z-index: 2;
-  background: var(--form-bg-color);
+  background: rgba(255, 255, 255, 0.05);
   padding: 3rem;
+  margin: 0 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  max-width: 400px;
-  width: 90%;
+  max-width: 500px;
 }
 
 .register-title {
-  color: var(--text-color);
+  color: #10db2b;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
@@ -63,7 +34,7 @@
 
 .register-form label {
   display: block;
-  color: var(--text-color);
+  color: #7a9273;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -71,18 +42,18 @@
 .register-form input {
   width: 100%;
   padding: 1rem;
-  background: var(--input-bg-color);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  color: var(--text-color);
+  color: #e0e0e0;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 .register-form input:focus {
   outline: none;
-  border-color: var(--button-color);
-  box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+  border-color: #10db2b;
+  box-shadow: 0 0 0 2px rgba(16, 219, 43, 0.1);
 }
 
 .register-button {
@@ -90,46 +61,32 @@
   padding: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: var(--button-color);
-  color: var(--background-color);
+  background-color: rgba(16, 219, 43, 0.1);
+  color: #7a9273;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .register-button:hover {
-  background-color: var(--button-hover-color);
+  color: #213725;
+  background-color: rgba(16, 219, 43, 0.3);
 }
 
 .register-login-link {
   margin-top: 1.5rem;
-  font-size: 0.9rem;
 }
 
 .register-login-link a {
-  color: var(--button-color);
+  color: #7a9273;
+  font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .register-login-link a:hover {
-  color: var(--text-color);
-}
-
-/* Overlay para el reflejo, similar al de login */
-.image-overlay-register {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300d3a48?q=80&w=2940&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-  transform: scaleY(-1);
-  filter: blur(10px) brightness(0.2) opacity(0.3);
-  mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  color: #10db2b;
+  text-shadow: 0 0 0 5px rgba(16, 219, 43, 0.5);
 }

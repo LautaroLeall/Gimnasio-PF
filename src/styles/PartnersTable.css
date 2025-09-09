@@ -1,4 +1,30 @@
-table {
-    text-shadow: 0px 0px 1px rgba(64, 255, 0, 1);
-    font-weight: bold;
+/* src/styles/PartnersTable.css */
+thead,
+tbody,
+tr,
+th,
+td {
+    border: 1.5px solid #50614b;
+}
+
+th.content-table {
+    color: #91ff70;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+td.content-table {
+    color: #7a9273;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px rgba(64, 255, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+td.content-table:hover {
+    color: #10db2b;
+    text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
+    transform: scale(0.98);
 }

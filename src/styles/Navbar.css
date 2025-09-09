@@ -1,8 +1,10 @@
+/* src/styles/Navbar.css */
 .navbar {
     width: 100%;
-    height: 90px;
-    transition: transform 0.3s ease, position 0.3s ease;
+    padding: 0.8rem 6rem;
+    transition: transform 0.3s ease-in-out;
     background-color: #212529;
+    border-bottom: 2px solid rgb(64, 255, 0);
     z-index: 1000;
 }
 
@@ -15,76 +17,115 @@
     transform: translateY(-120%);
 }
 
-#logo {
-    font-size: 2em;
-    color: #13200f;
-    cursor: grab;
+.navbar-center {
+    margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-center {
+        margin: 0;
+    }
+}
+
+.title-navbar,
+.nav-sobre-nosotros {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f8f9fa;
     text-shadow: 0px 0px 3px rgba(64, 255, 0, 1);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-#logo span {
+.title-navbar span,
+.nav-sobre-nosotros span {
     color: #10db2b;
 }
 
-#logo:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    color: #10db2b;
-}
-
-#SobreNosotros {
-    font-size: 2em;
-    color: #13200f;
-    cursor: grab;
-    text-shadow: 0px 0px 3px rgba(64, 255, 0, 1);
-    transition: all 0.3s ease-in-out;
-}
-
-#SobreNosotros span {
-    color: #10db2b;
-}
-
-#SobreNosotros:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    color: #10db2b;
-}
-
-#boton1 {
-    font-size: 1.5em;
-    color: #719d77;
-    text-shadow: 0px 0px 1px hsl(128, 100%, 8%);
-    transition: all 0.3s ease-in-out;
-}
-
-#boton1:hover {
+.title-navbar:hover,
+.nav-sobre-nosotros:hover {
     transform: scale(0.95);
+    color: #10db2b;
+}
+
+.btn-navbar-link {
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #50614b;
+    text-shadow: 1px 0px 1px rgba(64, 255, 0, 0.4);
+    border: 1px solid transparent;
+    padding: 0.4rem 0.8rem;
     transition: all 0.3s ease-in-out;
+}
+
+.btn-navbar-link:hover {
+    transform: scale(0.95);
+    border-color: #4dd45d;
+    color: #4dd45d;
+}
+
+.btn-logout {
+    font-size: 1.8rem;
+    color: #50614b;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-logout:hover {
+    transform: scale(1.1);
     color: #4dd45d;
 }
 
 .navbar-bottom {
-    background-color: rgba(300, 300, 300, 0.15);
     position: absolute;
-    top: 50%;
+    top: 10%;
     width: 100%;
-    height: 80px;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(300, 300, 300, 0.3);
+    border-top: 1px solid rgb(64, 255, 0);
 }
 
-@media (max-width: 768px) {
-    .container-btn {
-        display: flex;
-        align-items: center;
+.btn-navbar-botton {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #212529;
+    border: 1px solid transparent;
+    padding: 0.3rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-navbar-botton:hover {
+    transform: scale(0.95);
+    text-decoration: underline;
+    color: #1b440f;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 0.8rem 1.5rem;
     }
 
-    #logo,
-    #SobreNosotros {
-        font-size: 1.3em;
+    /* Cuando el menú hamburguesa está abierto */
+    .navbar-collapse.show {
+        text-align: center;
+        margin-top: 1rem;
+        border-top: 1px solid #10db2b;
+        padding-top: 1rem;
     }
 
-    #boton1 {
-        font-size: 1em;
-        width: 70%;
+    /* Espaciado vertical entre elementos del menú móvil */
+    .navbar-collapse .navbar-nav {
+        gap: 0.5rem;
+    }
+
+    .navbar-collapse .nav-item {
+        margin-bottom: 1rem;
+    }
+
+    .btn-navbar-link {
+        font-size: 1.5em;
     }
 }

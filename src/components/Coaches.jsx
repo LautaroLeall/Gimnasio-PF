@@ -93,8 +93,7 @@ const Coaches = () => {
                         {["Todos", "Crossfit", "Zumba", "Musculación", "Funcional"].map((tipo) => (
                             <button
                                 key={tipo}
-                                className={`btn btn-outline-${filtro === tipo ? "success" : "secondary"}`}
-                                id="boton1"
+                                className={`btn-coaches btn btn-outline-${filtro === tipo ? "success" : "secondary"}`}
                                 onClick={() => handleFiltroClick(tipo)}
                             >
                                 {tipo.toUpperCase()}
@@ -105,7 +104,7 @@ const Coaches = () => {
             </div>
 
             {/* Cards */}
-            <div className={`container-coaches mt-5 mb-5 fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`}>
+            <div className={`container-coaches mt-5 fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`}>
                 {filtro === "Todos" ? (
                     <Slider ref={sliderRef} {...settings}>
                         {entrenadoresFiltrados.map((coach, index) => (

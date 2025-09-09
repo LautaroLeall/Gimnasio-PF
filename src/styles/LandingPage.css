@@ -1,17 +1,13 @@
 /* src/styles/LandingPage.css */
-
-/* Importamos la misma fuente para mantener la consistencia */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .landing-container {
     background-color: #121212;
-    /* Un fondo oscuro */
     min-height: 100vh;
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    /* Evita barras de scroll innecesarias */
 }
 
 /* Columna Izquierda: Textos */
