@@ -1,21 +1,38 @@
-.form-select,
-.form-control,
-.btn {
+.select-clases,
+.input-turno,
+.btn-turnos {
     border: 1px solid rgba(64, 255, 0, 0.475);
-    cursor: grab;
     text-shadow: 0px 0px 1px rgba(64, 255, 0, 1);
-    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
-.btn:hover{
-    transform: scale(1.05);
+.form-turnos select:focus {
+    border: 1px solid rgba(64, 255, 0, 1);
+    box-shadow: 0 0 0 2px rgba(64, 255, 0, 0.475);
+}
+
+.form-turnos option:focus {
+    border: 1px solid rgba(64, 255, 0, 1);
+    box-shadow: 0 0 0 2px rgba(64, 255, 0, 0.475);
+}
+
+.form-turnos input:focus {
+    border: 1px solid rgba(64, 255, 0, 1);
+    box-shadow: 0 0 0 2px rgba(64, 255, 0, 0.475);
+}
+
+.btn-turnos:hover {
+    transform: scale(0.95);
     transition: all 0.3s ease-in-out;
 }
 
-.option-form {
+.option-clase {
     font-weight: bold;
     color: #4a7d3a;
-    cursor: grab;
     text-shadow: 0px 0px 1px rgba(64, 255, 0, 1);
+}
+
+.option-clases {
+    color: #1c7100;
+    text-shadow: 0px 1px 5px #90f372;
 }
