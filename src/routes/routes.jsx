@@ -1,12 +1,13 @@
 // src/routes/routes.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from '../components/NavBar';
+import { Routes, Route } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import Register from '../components/Register';
+import Login from '../components/Login';
+import Carousel from '../components/Carousel';
 import Sedes from '../components/Sedes';
 import Coaches from '../components/Coaches';
-import Carousel from '../components/Carousel';
 import SobreNosotros from '../components/SobreNosotros';
-import Login from '../components/Login';
-import Register from '../components/Register';
+import LandingPage from '../components/LandingPage';
 
 const AppRoutes = (props) => {
     const {
@@ -20,7 +21,6 @@ const AppRoutes = (props) => {
         socioEditado,
     } = props;
 
-    // Para no repetir tanto el mismo bloque
     const renderCarousel = (vista) => (
         <Carousel
             vista={vista}
@@ -36,20 +36,26 @@ const AppRoutes = (props) => {
     );
 
     return (
-        <BrowserRouter>
-                <NavBar />
-                <Routes>
-                    <Route path="/" element={renderCarousel("inicio")} />
-                    <Route path="/sedes" element={<Sedes />} />
-                    <Route path="/coaches" element={<Coaches />} />
-                    <Route path="/formulario" element={renderCarousel("formulario")} />
-                    <Route path="/tabla" element={renderCarousel("tabla")} />
-                    <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/banner" element={<Banner />} />
-                </Routes>
-        </BrowserRouter>
+        <Routes>
+            {/* --- 1. Rutas Públicas --- */}
+            {/* Estas rutas son accesibles para todos los usuarios. */}
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+
+            {/* --- 2. Rutas Privadas --- */}
+            {/* Aquí usamos PrivateRoute como una ruta "padre". */}
+            {/* Todas las rutas anidadas dentro de ella estarán protegidas. */}
+            <Route element={<PrivateRoute />}>
+                <Route path="/home" element={renderCarousel("inicio")} />
+                <Route path="/sedes" element={<Sedes />} />
+                <Route path="/coaches" element={<Coaches />} />
+                <Route path="/formulario" element={renderCarousel("formulario")} />
+                <Route path="/tabla" element={renderCarousel("tabla")} />
+                <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+            </Route>
+
+        </Routes>
     );
 };
 
