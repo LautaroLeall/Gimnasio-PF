@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Sedes.css';
+import NavBar from './NavBar';
+import Banner from './Banner';
 
 // Datos de las sedes (array ampliado)
 const gymLocations = [
@@ -56,55 +58,59 @@ const Sedes = () => {
   const [selectedLocation, setSelectedLocation] = useState(gymLocations[0]);
 
   return (
-    <div className="sedes-container">
-      <div className="title-section">
-        <h2 className="title-section__main">4  SEDES EN TUCUMÁN</h2>
-        <h3 className="title-section__sub">SIEMPRE CERCA TUYO</h3>
-        <p className="title-section__description">
-          Elegí la sede que más se adapte a vos y entrená sin límites. Siempre cerca, siempre disponible.
-        </p>
-        <div className="location-buttons">
-          {gymLocations.map((location) => (
-            <button
-              key={location.id}
-              className={`location-button ${selectedLocation.id === location.id ? 'active' : ''}`}
-              onClick={() => setSelectedLocation(location)}
-            >
-              {/* Se muestra solo la parte del nombre después de la primera palabra para concisión */}
-              {location.name.split(' ')[location.name.split(' ').length > 1 ? 1 : 0]}
-            </button>
-          ))}
+    <>
+      <NavBar />
+      <div className="sedes-container">
+        <div className="title-section">
+          <h2 className="title-section__main">4  SEDES EN TUCUMÁN</h2>
+          <h3 className="title-section__sub">SIEMPRE CERCA TUYO</h3>
+          <p className="title-section__description">
+            Elegí la sede que más se adapte a vos y entrená sin límites. Siempre cerca, siempre disponible.
+          </p>
+          <div className="location-buttons">
+            {gymLocations.map((location) => (
+              <button
+                key={location.id}
+                className={`location-button ${selectedLocation.id === location.id ? 'active' : ''}`}
+                onClick={() => setSelectedLocation(location)}
+              >
+                {/* Se muestra solo la parte del nombre después de la primera palabra para concisión */}
+                {location.name.split(' ')[location.name.split(' ').length > 1 ? 1 : 0]}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="location-info-section">
-        <div className="location-image-container">
-          <img
-            src={selectedLocation.image}
-            alt={`Sede ${selectedLocation.name}`}
-            className="location-image"
-          />
-        </div>
-        <div className="location-details">
-          <h4 className="location-details__name">{selectedLocation.name}</h4>
-          <p className="location-details__address">{selectedLocation.address}</p>
-          <p className="location-details__description">{selectedLocation.description}</p>
-          <div className="location-details__schedule">
-            <h5><i className="fas fa-clock"></i> Horarios</h5>
-            <p><strong>Lunes a Viernes:</strong> {selectedLocation.schedule.lunesAViernes}</p>
-            <p><strong>Sábados:</strong> {selectedLocation.schedule.sabados}</p>
+        <div className="location-info-section">
+          <div className="location-image-container">
+            <img
+              src={selectedLocation.image}
+              alt={`Sede ${selectedLocation.name}`}
+              className="location-image"
+            />
           </div>
-          <div className="location-details__actions">
-            <button className="btn-secondary">
-              Ver Clases
-            </button>
-            <button className="btn-primary">
-              ¡Inscribirme ahora!
-            </button>
+          <div className="location-details">
+            <h4 className="location-details__name">{selectedLocation.name}</h4>
+            <p className="location-details__address">{selectedLocation.address}</p>
+            <p className="location-details__description">{selectedLocation.description}</p>
+            <div className="location-details__schedule">
+              <h5><i className="fas fa-clock"></i> Horarios</h5>
+              <p><strong>Lunes a Viernes:</strong> {selectedLocation.schedule.lunesAViernes}</p>
+              <p><strong>Sábados:</strong> {selectedLocation.schedule.sabados}</p>
+            </div>
+            <div className="location-details__actions">
+              <button className="btn-secondary">
+                Ver Clases
+              </button>
+              <button className="btn-primary">
+                ¡Inscribirme ahora!
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Banner />
+    </>
   );
 };
 
