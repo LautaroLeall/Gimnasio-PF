@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/components/Sedes.jsx
+import { useState } from 'react';
 import '../styles/Sedes.css';
 import NavBar from './NavBar';
 import Banner from './Banner';
