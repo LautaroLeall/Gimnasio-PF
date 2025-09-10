@@ -8,14 +8,6 @@
   --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .sedes-container {
   display: flex;
   flex-direction: column;

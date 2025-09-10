@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import '../styles/Sedes.css';
 import NavBar from './NavBar';
-import Banner from './Banner';
+import BannerSedes from './BannerSedes';
+import Footer from './Footer';
 
 // Datos de las sedes (array ampliado)
 const gymLocations = [
@@ -61,7 +62,7 @@ const Sedes = () => {
   return (
     <>
       <NavBar />
-      <div className="sedes-container">
+      <div className="sedes-container mb-5">
         <div className="title-section">
           <h2 className="title-section__main">4  SEDES EN TUCUMÁN</h2>
           <h3 className="title-section__sub">SIEMPRE CERCA TUYO</h3>
@@ -110,7 +111,10 @@ const Sedes = () => {
           </div>
         </div>
       </div>
-      <Banner />
+      <section className="banner-sedes-section mb-5">
+        <BannerSedes />
+      </section>
+      <Footer />
     </>
   );
 };

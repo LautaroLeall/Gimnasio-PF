@@ -1,4 +1,4 @@
-// BannerPlanes.jsx
+// src/components/BannerPlanes.jsx
 import React from 'react';
 import '../styles/BannerPlanes.css';
 import { BsArrowRightCircleFill } from "react-icons/bs";
@@ -21,11 +21,11 @@ const BannerPlanes = () => {
             En tu caso, la imagen screengym003.png parece ser solo texto.
             Adaptamos la estructura para que se parezca a la imagen 001 pero
             con la información textual del lado derecho de la imagen 003. */}
-        
+
         <div className="banner-planes-features">
           <div className="banner-feature-item">
             <div className="feature-icon-container green-icon">
-            <BsArrowRightCircleFill />
+              <BsArrowRightCircleFill />
             </div>
             <div className="feature-text">
               <h3 className="feature-title">INSTALACIONES DE PRIMER NIVEL</h3>
@@ -34,7 +34,7 @@ const BannerPlanes = () => {
           </div>
           <div className="banner-feature-item">
             <div className="feature-icon-container green-icon">
-             <BsArrowRightCircleFill />
+              <BsArrowRightCircleFill />
             </div>
             <div className="feature-text">
               <h3 className="feature-title">ENTRENADORES PROFESIONALES</h3>
@@ -43,7 +43,7 @@ const BannerPlanes = () => {
           </div>
           <div className="banner-feature-item">
             <div className="feature-icon-container green-icon">
-            <BsArrowRightCircleFill />
+              <BsArrowRightCircleFill />
             </div>
             <div className="feature-text">
               <h3 className="feature-title">CLASES GRUPALES MOTIVADORAS</h3>

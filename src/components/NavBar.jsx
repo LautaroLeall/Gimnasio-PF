@@ -79,6 +79,11 @@ const NavBar = () => {
                                 </button>
                             </li>
                             <li className="nav-item">
+                                <button className="btn-navbar-link btn" onClick={() => navigate('/planes')}>
+                                    Planes
+                                </button>
+                            </li>
+                            <li className="nav-item">
                                 <button className="btn-navbar-link btn" onClick={() => navigate('/coaches')}>
                                     Entrenadores
                                 </button>

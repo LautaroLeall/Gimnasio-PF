@@ -92,7 +92,7 @@ const Form = ({
     };
 
     return (
-        <div className="d-flex flex-column align-items-center">
+        <div className="content-form d-flex flex-column align-items-center">
             <form onSubmit={handleSubmit} className="form-turnos p-4 w-75 my-5">
                 {/* Selector de clase */}
                 <div className="mb-3">
