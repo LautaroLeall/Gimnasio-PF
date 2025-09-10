@@ -1,7 +1,7 @@
-// src/components/HorariosGym.jsx
-import '../styles/Horariosgym.css';
+// src/components/BannerSedes.jsx
+import '../styles/BannerSedes.css';
 
-const HorariosGym = () => {
+const BannerSedes = () => {
   return (
     <>
       <div className="containers-text">
@@ -74,4 +74,4 @@ const HorariosGym = () => {
   )
 }
 
-export default HorariosGym
+export default BannerSedes

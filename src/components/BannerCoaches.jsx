@@ -1,6 +1,6 @@
-// src/components/Banner.jsx
+// src/components/BannerCoaches.jsx
 import React from 'react';
-import '../styles/Banner.css';
+import '../styles/BannerCoaches.css';
 
 const Banner = () => {
   return (

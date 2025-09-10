@@ -1,10 +1,11 @@
 // src/components/Carousel.jsx
 import { useRef, useEffect } from 'react';
 import NavBar from './NavBar';
-import HorariosGym from './HorariosGym';
+import BannerHome from './BannerHome';
 import Form from './Form';
 import PartnersTable from './PartnersTable';
 import NavbarBotton from './NavbarBotton';
+import Footer from './Footer';
 import '../styles/Carousel.css';
 
 // Componente principal llamado Carousel
@@ -47,18 +48,19 @@ const Carousel = ({
     return (
         <>
             <NavBar />
-            <section className="contenedor-carousel"> {/* Contenedor principal del carrusel */}
+            <section className="contenedor-carousel">
 
                 {/* Sección con efecto parallax de bienvenida */}
                 <section className="parallax-1">
-                    <div className="parallax-inner">
+                    <div className="parallax-inner d-flex justify-content-center align-items-center h-100">
                         <h1 className="title-img">Bienvenidos a Nuestro Gimnasio</h1>
                     </div>
                 </section>
 
                 {/* Sección de horarios del gimnasio */}
                 <section>
-                    <HorariosGym />
+                    <BannerHome />
+                    {/* <HorariosGym /> */}
                 </section>
 
                 {/* Sección con efecto parallax antes del formulario */}
@@ -101,6 +103,7 @@ const Carousel = ({
             <section className='navbar-bottom d-flex justify-content-center align-items-center'>
                 <NavbarBotton />
             </section>
+            <Footer />
         </>
     );
 };

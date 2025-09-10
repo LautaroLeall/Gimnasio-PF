@@ -10,7 +10,7 @@ const SobreNosotros = () => {
             <NavBar />
             <div className="producto-container d-flex align-items-center text-light my-5 mx-5">
 
-                <div className="detalles d-flex flex-column gap-2 rounded-5 p-3">
+                <div className="detalles d-flex flex-column gap-2 rounded-5 p-3 mt-5">
                     <div className="title text-center">
                         <h1 className="title">GONZALO MARTINEZ</h1>
                     </div>
