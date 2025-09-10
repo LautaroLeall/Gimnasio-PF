@@ -1,14 +1,13 @@
-// Footer.jsx
-
+// src/components/Footer.jsx
 import React from 'react';
 import '../styles/Footer.css';
-import logo from '../assets/LGlogo.png'; // Asegúrate de ajustar esta ruta
+import logo from '../assets/LGlogo.png';
 
 const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        
+
         <div className="footer-logo-section">
           <img src={logo} alt="LG Logo" className="footer-logo" />
         </div>
@@ -35,14 +34,14 @@ const Footer = () => {
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
             <hr />
-             <ul>
+            <ul>
               <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            
+
             </ul>
           </div>
-           <div className="footer-column">
+          <div className="footer-column">
             <h3>Contacto</h3>
             <p>Dirección: Calle Falsa 123</p>
             <p>Teléfono: +54 9 11 1234-5678</p>
@@ -51,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Nombre de tu GYM. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()}. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
