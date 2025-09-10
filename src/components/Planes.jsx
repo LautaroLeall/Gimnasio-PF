@@ -1,6 +1,8 @@
-// Planes.jsx
-
-import React, { useState } from 'react';
+// src/components/Planes.jsx
+import { useState } from 'react';
+import NavBar from './NavBar';
+import BannerPlanes from './BannerPlanes';
+import Footer from './Footer';
 import '../styles/Planes.css';
 
 const planesData = {
@@ -41,45 +43,52 @@ const Planes = () => {
   const currentPlanes = planesData[activeSede] || [];
 
   return (
-    <div className="planes-container-full">
-      <div className="main-title-container">
-        <h1 className="main-title">ELEGÍ TU SEDE</h1>
-        <h2 className="main-subtitle">Y CONOCÉ LOS PRECIOS</h2>
-      </div>
+    <>
+      <NavBar />
+      <div className="planes-container-full mb-3">
+        <div className="main-title-container">
+          <h1 className="main-title">ELEGÍ TU SEDE</h1>
+          <h2 className="main-subtitle">Y CONOCÉ LOS PRECIOS</h2>
+        </div>
 
-      <div className="location-tabs">
-        {Object.keys(planesData).map((sede) => (
-          <button
-            key={sede}
-            className={`tab-button ${activeSede === sede ? 'active' : ''}`}
-            onClick={() => handleSedeClick(sede)}
-          >
-            {sede}
-          </button>
-        ))}
-      </div>
-
-      <section className="planes-section">
-        <div className="planes-cards-container">
-          {currentPlanes.map((plan, index) => (
-            <div key={index} className={`plan-card ${plan.isFeatured ? 'featured-plan' : ''}`}>
-              <div className="plan-content">
-                <div className="plan-header">
-                  <h3 className="plan-title">{plan.title}</h3>
-                  <p className="plan-subtitle">{plan.subtitle}</p>
-                </div>
-                <div className="plan-body">
-                  <p className="plan-price">{plan.price}</p>
-                  <p className="plan-info">Matrícula incluida</p>
-                  <p className="plan-description">{plan.description}</p>
-                </div>
-              </div>
-              <a href="#" className="plan-button">Quiero este plan</a>
-            </div>
+        <div className="location-tabs">
+          {Object.keys(planesData).map((sede) => (
+            <button
+              key={sede}
+              className={`tab-button ${activeSede === sede ? 'active' : ''}`}
+              onClick={() => handleSedeClick(sede)}
+            >
+              {sede}
+            </button>
           ))}
         </div>
+
+        <section className="planes-section">
+          <div className="planes-cards-container">
+            {currentPlanes.map((plan, index) => (
+              <div key={index} className={`plan-card ${plan.isFeatured ? 'featured-plan' : ''}`}>
+                <div className="plan-content">
+                  <div className="plan-header">
+                    <h3 className="plan-title">{plan.title}</h3>
+                    <p className="plan-subtitle">{plan.subtitle}</p>
+                  </div>
+                  <div className="plan-body">
+                    <p className="plan-price">{plan.price}</p>
+                    <p className="plan-info">Matrícula incluida</p>
+                    <p className="plan-description">{plan.description}</p>
+                  </div>
+                </div>
+                <a href="#" className="plan-button">Quiero este plan</a>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <section className="banner-plan-section mb-5">
+      <BannerPlanes />
       </section>
-    </div>
+      <Footer />
+    </>
   );
 };
 
