@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AppRoutes from './routes/routes';
-import './styles/App.css';
+import './main.css';
 
 // Componente principal de la aplicación
 function App() {

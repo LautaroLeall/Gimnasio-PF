@@ -1,6 +1,0 @@
-/* Barra de scroll  */
-/* Para que en sobre nosotros no se cambie el navbar */
-
-html {
-    overflow-y: scroll;
-}
