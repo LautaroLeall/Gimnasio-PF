@@ -53,15 +53,12 @@ const AppRoutes = (props) => {
             {/* Todas las rutas anidadas dentro de ella estarán protegidas. */}
             <Route element={<PrivateRoute />}>
                 <Route path="/home" element={renderCarousel("inicio")} />
-                <Route path="/sedes" element={<Sedes />} />
-                <Route path="/coaches" element={<Coaches />} />
-                <Route path="/formulario" element={renderCarousel("formulario")} />
                 <Route path="/tabla" element={renderCarousel("tabla")} />
-                <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+                <Route path="/formulario" element={renderCarousel("formulario")} />
+                <Route path="/sedes" element={<Sedes />} />
                 <Route path="/planes" element={<Planes />} />
-                <Route path="/bannerHome" element={<BannerHome />} />
-                <Route path="/footer" element={<Footer />} />
-                <Route path="/bannerplanes" element={<BannerPlanes />} />
+                <Route path="/coaches" element={<Coaches />} />
+                <Route path="/sobre-nosotros" element={<SobreNosotros />} />
             </Route>
 
         </Routes>
