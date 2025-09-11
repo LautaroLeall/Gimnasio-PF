@@ -94,7 +94,7 @@ const Coaches = () => {
                         {["Todos", "Crossfit", "Zumba", "Musculación", "Funcional"].map((tipo) => (
                             <button
                                 key={tipo}
-                                className={`btn-coaches btn btn-outline-${filtro === tipo ? "success" : "secondary"}`}
+                                className={`btn-coaches btn btn-${filtro === tipo ? "active" : ""}`}
                                 onClick={() => handleFiltroClick(tipo)}
                             >
                                 {tipo.toUpperCase()}
