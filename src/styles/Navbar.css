@@ -1,7 +1,7 @@
 /* src/styles/Navbar.css */
 .navbar {
     width: 100%;
-    padding: 0.8rem 6rem;
+    padding: 0.8rem 2rem;
     transition: transform 0.3s ease-in-out;
     background-color: #212529;
     border-bottom: 2px solid rgb(64, 255, 0);
@@ -25,6 +25,19 @@
     .navbar-center {
         margin: 0;
     }
+}
+
+.logo-navbar {
+    height: 5rem;
+    width: auto;
+    margin-right: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-navbar:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 5px rgba(64, 255, 0, 1));
 }
 
 .title-navbar,
@@ -78,18 +91,18 @@
 
 .navbar-bottom {
     position: absolute;
-    top: 10%;
+    top: 70vh;
     width: 100%;
     padding: 0.8rem 1.5rem;
-    background-color: rgba(300, 300, 300, 0.3);
-    border-top: 1px solid rgb(64, 255, 0);
+    background-color: rgba(300, 300, 300, 0.2);
 }
 
 .btn-navbar-botton {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-weight: 400;
-    color: #212529;
+    color: #d8ffcd;
+    text-shadow: 1px 1px 2px rgba(64, 255, 0);
     border: 1px solid transparent;
     padding: 0.3rem 0.5rem;
     transition: all 0.3s ease-in-out;

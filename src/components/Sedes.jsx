@@ -16,8 +16,9 @@ const gymLocations = [
       lunesAViernes: '08:00 - 23:00',
       sabados: '09:00 - 13:30 / 16:00 - 20:00'
     },
-    image: 'https://images.unsplash.com/photo-1544367500-2d8869c9431f?q=80&w=2670&auto=format&fit=crop' // Imagen de la sede Centro
+    image: 'https://images.unsplash.com/photo-1544367500-2d8869c9431f?q=80&w=2670&auto=format&fit=crop'
   },
+
   {
     id: 'peron',
     name: 'SEDE PERÓN',
@@ -27,20 +28,21 @@ const gymLocations = [
       lunesAViernes: '08:00 - 23:00',
       sabados: '09:00 - 13:30 / 16:00 - 20:00'
     },
-    image: 'https://images.unsplash.com/photo-1574680096145-af07c6b44a86?q=80&w=2670&auto=format&fit=crop' // Imagen de la sede Perón
+    image: 'https://images.unsplash.com/photo-1574680096145-af07c6b44a86?q=80&w=2670&auto=format&fit=crop'
   },
-  // --- NUEVAS SEDES AÑADIDAS ---
+
   {
     id: 'barrio-sur',
     name: 'SEDE BARRIO SUR',
-    address: 'CALLE SIEMPRE VIVA 742', // Dirección de ejemplo
+    address: 'CALLE SIEMPRE VIVA 742',
     description: 'Disfruta de nuestras modernas instalaciones en Barrio Sur. Un espacio diseñado para tu bienestar y rendimiento.',
     schedule: {
       lunesAViernes: '07:00 - 22:00',
       sabados: '10:00 - 14:00'
     },
-    image: 'https://images.unsplash.com/photo-1594027154057-c7d579a2d397?q=80&w=2670&auto=format&fit=crop' // Imagen de ejemplo para Barrio Sur
+    image: 'https://images.unsplash.com/photo-1594027154057-c7d579a2d397?q=80&w=2670&auto=format&fit=crop'
   },
+
   {
     id: 'aconquija',
     name: 'SEDE AVENIDA ACONQUIJA',
@@ -50,9 +52,8 @@ const gymLocations = [
       lunesAViernes: '09:00 - 21:00',
       sabados: '09:00 - 13:00'
     },
-    image: 'https://images.unsplash.com/photo-1530952463394-24941f3b81a0?q=80&w=2670&auto=format&fit=crop' // Imagen de ejemplo para Av. Aconquija
+    image: 'https://images.unsplash.com/photo-1530952463394-24941f3b81a0?q=80&w=2670&auto=format&fit=crop'
   }
-  // --- FIN NUEVAS SEDES ---
 ];
 
 const Sedes = () => {
@@ -62,21 +63,20 @@ const Sedes = () => {
   return (
     <>
       <NavBar />
-      <div className="sedes-container mb-5">
+      <div className="container-fluid container-info-sedes text-white">
         <div className="title-section">
-          <h2 className="title-section__main">4  SEDES EN TUCUMÁN</h2>
-          <h3 className="title-section__sub">SIEMPRE CERCA TUYO</h3>
-          <p className="title-section__description">
+          <h2 className="title-section-sedes">4  SEDES EN TUCUMÁN</h2>
+          <h3 className="subtitle-section-sedes">SIEMPRE CERCA TUYO</h3>
+          <p className="description-section-sedes text-center mx-auto">
             Elegí la sede que más se adapte a vos y entrená sin límites. Siempre cerca, siempre disponible.
           </p>
-          <div className="location-buttons">
+          <div className="location-buttons my-5">
             {gymLocations.map((location) => (
               <button
                 key={location.id}
                 className={`location-button ${selectedLocation.id === location.id ? 'active' : ''}`}
                 onClick={() => setSelectedLocation(location)}
               >
-                {/* Se muestra solo la parte del nombre después de la primera palabra para concisión */}
                 {location.name.split(' ')[location.name.split(' ').length > 1 ? 1 : 0]}
               </button>
             ))}

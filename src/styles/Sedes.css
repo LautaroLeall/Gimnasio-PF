@@ -1,20 +1,9 @@
 /* src/styles/Sedes.css */
-:root {
-  --background-color: #121212;
-  --text-color: #e0e0e0;
-  --primary-color: #00bcd4; /* Azul cian */
-  --secondary-color: #4a4a4a; /* Gris para los botones inactivos */
-  --button-hover-color: #0097a7;
-  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-}
-
-.sedes-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1rem;
+.container-info-sedes {
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .title-section {
@@ -22,62 +11,66 @@
   margin-bottom: 3rem;
 }
 
-.title-section__main {
-  font-size: 2.5rem;
+.title-section-sedes {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 5px;
 }
 
-.title-section__sub {
+.subtitle-section-sedes {
+  color: #18e63b;
   font-size: 1.5rem;
-  font-weight: 300;
-  margin-top: 0;
-  color: var(--primary-color);
+  font-weight: 400;
+  margin: 10px 0 0;
+  letter-spacing: 3px;
 }
 
-.title-section__description {
+.description-section-sedes {
   font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+  color: #ccc;
+  margin: 0.7rem 0;
 }
 
 /* Botones de selección de sede */
 .location-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
 }
 
 .location-button {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  color: #888;
+  border: 2px solid #888;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .location-button.active {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  font-weight: 700;
-  transform: scale(1.05);
+  background-color: #02680691;
+  color: #fff;
+  border-color: #02680691;
 }
 
 .location-button:hover:not(.active) {
-  background-color: #5a5a5a;
+  border-color: #fff;
+  color: #fff;
 }
 
 /* Sección de información de la sede */
 .location-info-section {
   display: flex;
-  background: #1e1e1e; /* Un gris más oscuro */
+  background: #1e1e1e;
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
 }
@@ -105,14 +98,15 @@
 .location-details__name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  background-color: #02680691;
+  color: #ccc;
   margin: 0 0 0.5rem;
 }
 
 .location-details__address {
   font-size: 1rem;
   font-weight: 300;
-  color: #a0a0a0;
+  color: #18e63b;
   margin-top: 0;
 }
 
@@ -130,18 +124,18 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
-  color: var(--text-color);
+  color: #18e63b;
 }
 
 .location-details__schedule p {
   margin: 0;
   font-size: 0.9rem;
-  color: #a0a0a0;
+  color: #ccc;
 }
 
 .location-details__schedule i {
   margin-right: 0.5rem;
-  color: var(--primary-color);
+  color: #ccc;
 }
 
 .location-details__actions {
@@ -150,7 +144,8 @@
 }
 
 /* Botones de acción */
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
@@ -160,22 +155,27 @@
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--background-color);
+  background-color: transparent;
+  color: #888;
+  border: 2px solid #888;
 }
 
 .btn-primary:hover {
-  background-color: var(--button-hover-color);
+  background-color: #02680691;
+  border-color: #fff;
+  color: #fff;
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color: #02680691;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background-color: rgba(0, 188, 212, 0.1);
+  background-color: transparent;
+  color: #02680691;
+  border-color: #02680691;
 }
 
 /* Media Queries para diseño responsive */
