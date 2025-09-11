@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import { FiLogOut } from "react-icons/fi";
+import logo from '/LGlogo.png';
 import '../styles/Navbar.css';
 
 const NavBar = () => {
@@ -52,6 +53,14 @@ const NavBar = () => {
             >
                 <div className="container-fluid d-flex align-items-center">
                     {/* Logo a la izquierda */}
+                    <img
+                        src={logo}
+                        alt="Logo"
+                        className="navbar-brand logo-navbar"
+                        onClick={() => navigate('/home')}
+                    />
+
+                    {/* Título a la izquierda */}
                     <h1 className="navbar-brand m-0 title-navbar" onClick={() => navigate('/home')}>
                         <span>GYM</span>NASIO
                     </h1>
@@ -72,7 +81,7 @@ const NavBar = () => {
                     {/* Contenedor Colapsable */}
                     <div className="collapse navbar-collapse" id="navbarNavContent">
                         {/* GRUPO DE BOTONES CENTRALES */}
-                        <ul className="navbar-nav navbar-center w-100 justify-content-evenly">
+                        <ul className="navbar-nav navbar-center w-100 justify-content-center gap-5">
                             <li className="nav-item">
                                 <button className="btn-navbar-link btn" onClick={() => navigate('/sedes')}>
                                     Sedes
