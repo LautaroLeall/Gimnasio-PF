@@ -1,6 +1,9 @@
 // src/components/Coaches.jsx
 import Slider from "react-slick";
 import { useState, useRef, useEffect } from "react";
+import NavBar from './NavBar';
+import Banner from './BannerCoaches';
+import Footer from './Footer';
 import "../styles/Coaches.css";
 import coachesData from "../api/coachesData";
 
@@ -57,8 +60,9 @@ const Coaches = () => {
 
     return (
         <>
+            <NavBar />
             {/* Texto y filtros */}
-            <div className="container-fluid text-white mt-5">
+            <div className="container-fluid container-info-coaches text-white mt-5">
                 {/* Textos principales */}
                 <div className="row justify-content-center align-items-center">
                     <div className="col-5">
@@ -90,8 +94,7 @@ const Coaches = () => {
                         {["Todos", "Crossfit", "Zumba", "Musculación", "Funcional"].map((tipo) => (
                             <button
                                 key={tipo}
-                                className={`btn btn-outline-${filtro === tipo ? "success" : "secondary"}`}
-                                id="boton1"
+                                className={`btn-coaches btn btn-${filtro === tipo ? "active" : ""}`}
                                 onClick={() => handleFiltroClick(tipo)}
                             >
                                 {tipo.toUpperCase()}
@@ -102,7 +105,7 @@ const Coaches = () => {
             </div>
 
             {/* Cards */}
-            <div className={`container-coaches mt-5 mb-5 fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`}>
+            <div className={`container-coaches fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`}>
                 {filtro === "Todos" ? (
                     <Slider ref={sliderRef} {...settings}>
                         {entrenadoresFiltrados.map((coach, index) => (
@@ -137,6 +140,8 @@ const Coaches = () => {
                     </div>
                 )}
             </div>
+            <Banner />
+            <Footer />
         </>
     );
 };

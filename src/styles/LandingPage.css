@@ -1,0 +1,129 @@
+/* src/styles/LandingPage.css */
+.landing-container {
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Columna Izquierda: Textos */
+.title-container {
+    cursor: default;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 200;
+    color: #50614b;
+    letter-spacing: 0.3rem;
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.brand-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #10db2b;
+    letter-spacing: 0.8rem;
+    text-shadow: 0px 0px 5px rgba(16, 219, 43, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.landing-text-content:hover .main-title {
+    color: #fff;
+}
+
+.landing-text-content:hover .brand-title {
+    color: #50614b;
+    text-shadow: none;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Línea separadora */
+.linea-separadora-vertical {
+    background-color: #10db2b;
+    width: 3px;
+    height: 200px;
+}
+
+/* Columna Derecha: Acciones y Botones */
+.action-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #50614b;
+}
+
+.action-title {
+    font-weight: 600;
+    color: #fff;
+}
+
+.action-subtitle {
+    color: #a0a0a0;
+}
+
+/* Estilos de botones personalizados */
+.btn-custom-green {
+    background-color: #10db2b;
+    border-color: #10db2b;
+    color: #121212;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-green:hover {
+    background-color: #0da821;
+    border-color: #0da821;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(16, 219, 43, 0.3);
+}
+
+.btn-outline-custom-green {
+    border-color: #10db2b;
+    color: #10db2b;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom-green:hover {
+    background-color: #10db2b;
+    color: #121212;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(16, 219, 43, 0.2);
+}
+
+/* Responsive para móviles */
+@media (max-width: 767px) {
+    .landing-container {
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .brand-title {
+        font-size: 3rem;
+    }
+
+    /* Añadimos un separador horizontal en móvil */
+    .action-container {
+        margin-top: 40px;
+        border-top: 2px solid #10db2b;
+        padding-top: 40px;
+    }
+}

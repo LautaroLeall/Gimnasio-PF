@@ -1,0 +1,137 @@
+/* src/styles/BannerPlanes.css */
+.banner-planes-container {
+  display: flex;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 60px 40px;
+  align-items: center;
+  overflow: hidden;
+  position: relative; 
+}
+
+.banner-planes-left {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.banner-planes-title {
+  font-size: 2.5rem; /* Tamaño grande, como en la imagen 001 */
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00ff00; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 3px;
+}
+
+.banner-planes-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.banner-planes-cta-button {
+  display: inline-block;
+  background-color: #00cc00; 
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border: 2px solid #00cc00; 
+}
+
+.banner-planes-cta-button:hover {
+  background-color: #00aa00; 
+  border-color: #00aa00;
+}
+
+.banner-planes-right {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.banner-planes-features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banner-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #222; 
+}
+
+.feature-icon-container.green-icon {
+  background-color: #2e8b2e95;
+}
+
+.feature-icon-container .icon {
+  font-size: 2rem; 
+  color: #fff; 
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #00ff00; 
+  margin: 0 0 5px 0;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .banner-planes-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .banner-planes-left,
+  .banner-planes-right {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .banner-planes-title {
+    font-size: 3.5rem;
+  }
+  .banner-planes-cta-button {
+    margin-bottom: 30px;
+  }
+  .banner-feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .feature-icon-container {
+    margin-bottom: 10px;
+  }
+}

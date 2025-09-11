@@ -1,0 +1,118 @@
+/* src/styles/BannerHome.css */
+.banner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.banner-highlight {
+  color: #18e63b;
+  font-weight: 700;
+}
+
+.banner-description {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.banner-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  color: #ccc;
+  text-align: left;
+}
+
+.banner-features li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.banner-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #0fda26;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.banner-mission {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.banner-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #0fda26;
+  border: 2px solid #13da48;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.banner-button:hover {
+  background-color: #1abd38;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(27, 218, 56, 0.3);
+}
+
+.banner-split__separator {
+  background-color: #10db2b;
+  width: 3px;
+  height: 250px;
+  /* Altura del separador */
+}
+
+.banner-split__details-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #50614b;
+}
+
+@media (max-width: 992px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-split {
+    text-align: center;
+    /* Centra todo el texto en móvil */
+  }
+
+  .banner-split__content {
+    margin-bottom: 40px;
+    /* Espacio entre el título y la caja de detalles */
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+  }
+
+  .banner-features,
+  .banner-mission {
+    text-align: left;
+    /* Mantenemos el texto de la caja alineado a la izquierda */
+  }
+}

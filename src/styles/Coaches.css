@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif, 'work sans', sans-serif;
+/* src/styles/Coaches.css */
+.container-info-coaches {
+    padding: 50px;
 }
 
 /* Línea separadora entre textos */
@@ -16,40 +12,25 @@
 
 /* Título de coaches */
 .text-coaches {
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-    cursor: context-menu;
-}
-
-.text-coaches:hover .first-text {
-    transition: all 0.3s ease-in-out;
-    color: #50614b;
-    text-shadow: 0px 0px 3px hsla(104, 13%, 34%, 0.8);
-}
-
-.text-coaches:hover .second-text {
-    transition: all 0.3s ease-in-out;
-    color: #10db2b;
-    text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
-}
-
-.text-coaches2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 5px;
     cursor: context-menu;
 }
 
 .first-text {
-    color: #10db2b;
-    transition: all 0.3s ease-in-out;
+    color: #fff;
 }
 
 .second-text {
-    color: #50614b;
-    transition: all 0.3s ease-in-out;
+    color: #18e63b;
 }
 
 .third-text {
-    text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
+    color: #ccc;
+    text-shadow: 0px 0px 2px rgba(64, 255, 0, 0.8);
     font-size: 1.1rem;
     font-weight: 200;
     letter-spacing: 0.1rem;
@@ -61,6 +42,30 @@
 }
 
 /* CARDS */
+/* BTN Coaches */
+.btn-coaches {
+    background-color: transparent;
+    color: #888;
+    border: 2px solid #888;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-coaches.btn-active {
+    background-color: #02680691;
+    color: #fff;
+    border-color: #02680691;
+}
+
+.btn-coaches:hover:not(.btn-active) {
+    border-color: #fff;
+    color: #fff;
+}
+
 /* Contenedor general de cada coach */
 .coach-card {
     padding: 20px;

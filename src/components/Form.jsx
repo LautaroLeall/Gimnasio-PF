@@ -92,14 +92,14 @@ const Form = ({
     };
 
     return (
-        <div className="d-flex flex-column align-items-center">
-            <form onSubmit={handleSubmit} className="formulario p-4 w-75 my-5">
+        <div className="content-form d-flex flex-column align-items-center">
+            <form onSubmit={handleSubmit} className="form-turnos p-4 w-75 my-5">
                 {/* Selector de clase */}
                 <div className="mb-3">
-                    <select className="form-select" name="clase" value={formData.clase} onChange={handleChange} required>
-                        <option className="option-form" value="">Seleccionar clase</option>
+                    <select className="form-select select-clases" name="clase" value={formData.clase} onChange={handleChange} required>
+                        <option className="option-form option-clase" value="">Seleccionar clase</option>
                         {Object.keys(clasesDisponibles).map((clase) => (
-                            <option className="option-form" key={clase} value={clase}>{clase}</option>
+                            <option className="option-form option-clases" key={clase} value={clase}>{clase}</option>
                         ))}
                     </select>
                 </div>
@@ -107,7 +107,7 @@ const Form = ({
                 {/* Campo para nombre y apellido */}
                 <div className="mb-3">
                     <input
-                        className="form-control"
+                        className="form-control input-turno"
                         type="text"
                         name="nombreApellido"
                         value={formData.nombreApellido}
@@ -120,7 +120,7 @@ const Form = ({
                 {/* Campo para teléfono */}
                 <div className="mb-3">
                     <input
-                        className="form-control"
+                        className="form-control input-turno"
                         type="number"
                         name="telefono"
                         value={formData.telefono}
@@ -133,7 +133,7 @@ const Form = ({
                 {/* Campo para email */}
                 <div className="mb-3">
                     <input
-                        className="form-control"
+                        className="form-control input-turno"
                         type="email"
                         name="email"
                         value={formData.email}
@@ -145,10 +145,10 @@ const Form = ({
 
                 {/* Selector de horario según clase elegida */}
                 <div className="mb-3">
-                    <select className="form-select" name="horario" value={formData.horario} onChange={handleChange} required>
-                        <option className="option-form" value="">Seleccionar horario</option>
+                    <select className="form-select select-clases" name="horario" value={formData.horario} onChange={handleChange} required>
+                        <option className="option-form option-clase" value="">Seleccionar horario</option>
                         {horariosOpciones.map((hora) => (
-                            <option className="option-form" key={hora} value={hora}>{hora}</option>
+                            <option className="option-form option-clases" key={hora} value={hora}>{hora}</option>
                         ))}
                     </select>
                 </div>
@@ -156,12 +156,12 @@ const Form = ({
                 {/* Botones para aceptar/cancelar si está editando, o registrar si no */}
                 {modoEdicion ? (
                     <div className="d-flex gap-3 mt-2">
-                        <button type="submit" className="btn btn-outline-success flex-fill">Aceptar</button>
-                        <button type="button" className="btn btn-outline-danger flex-fill" onClick={cancelarEdicion}>Cancelar</button>
+                        <button type="submit" className="btn-turnos btn btn-outline-success flex-fill">Aceptar</button>
+                        <button type="button" className="btn-turnos btn btn-outline-danger flex-fill" onClick={cancelarEdicion}>Cancelar</button>
                     </div>
                 ) : (
                     <div className="d-flex justify-content-center">
-                        <button type="submit" className="btn btn-outline-secondary w-50 mt-2">Registrar Turno</button>
+                        <button type="submit" className="btn-turnos btn btn-outline-secondary w-50 mt-2">Registrar Turno</button>
                     </div>
                 )}
             </form>
