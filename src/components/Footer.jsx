@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import '../styles/Footer.css';
-import logo from '../assets/LGlogo.png';
+import logo from '/LGlogo.png';
 
 const Footer = () => {
   return (
