@@ -1,10 +1,12 @@
 /* src/styles/Planes.css */
+/* Contenedor principal */
 .planes-container-full {
   padding: 80px 20px;
   color: #fff;
   text-align: center;
 }
 
+/* Titulares */
 .main-title-container {
   margin-bottom: 50px;
 }
@@ -26,11 +28,13 @@
   letter-spacing: 3px;
 }
 
+/* Pestañas de sedes */
 .location-tabs {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
@@ -42,7 +46,7 @@
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .tab-button.active {
@@ -61,6 +65,7 @@
   justify-content: center;
 }
 
+/* Contenedor de tarjetas */
 .planes-cards-container {
   display: flex;
   justify-content: center;
@@ -70,7 +75,7 @@
   width: 100%;
 }
 
-/* Estilos de las tarjetas de planes */
+/* Tarjeta de plan */
 .plan-card {
   display: flex;
   flex-direction: column;
@@ -82,7 +87,7 @@
   box-sizing: border-box;
   text-align: center;
   color: #fff;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -109,8 +114,8 @@
   font-size: 3rem;
   font-weight: 700;
   margin: 20px 0;
-   color: #10db2b;
-    text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
+  color: #10db2b;
+  text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
 }
 
 .plan-info {
@@ -129,28 +134,26 @@
 
 .plan-button {
   display: block;
- color: #10db2b;
-   text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
-   color: #10db2b;
-  text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);;
+  color: #10db2b;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px 30px;
   border-radius: 5px;
   margin-top: auto;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .plan-button:hover {
   background-color: #02680691;
+  color: #fff;
 }
 
-/* Estilo para el plan destacado */
+/* Plan destacado */
 .featured-plan {
   background-color: #16c11c91;
   color: #fff;
-  box-shadow: 0 4px 15px rgba(5, 241, 64, 0.928);
+  box-shadow: 0 4px 15px rgba(5, 241, 64, 0.92);
 }
 
 .featured-plan .plan-price,
@@ -168,13 +171,65 @@
 
 .featured-plan .plan-button:hover {
   color: #10db2b;
-  text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);;
+  text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
 }
 
-/* Media Queries para Responsividad */
+/* ANIMACIÓN FADE + ZOOM */
+.fade-zoom-wrapper {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-zoom-wrapper.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+.fade-zoom-wrapper.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .planes-cards-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .plan-card {
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    min-height: auto;
+  }
+
+  .plan-price {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .main-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .tab-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .plan-price {
+    font-size: 1.8rem;
+  }
+
+  .plan-card {
+    padding: 20px;
   }
 }
