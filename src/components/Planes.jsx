@@ -165,7 +165,7 @@ const Planes = () => {
     <>
       <NavBar />
 
-      <div className="planes-container-full mb-3">
+      <div className="planes-container-full mb-3" id="planes">
         <div className="main-title-container">
           <h1 className="main-title">ELEGÍ TU SEDE</h1>
           <h2 className="main-subtitle">Y CONOCÉ LOS PRECIOS</h2>

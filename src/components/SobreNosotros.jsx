@@ -1,8 +1,8 @@
 // src/components/SobreNosotros.jsx
 import React from 'react';
 import NavBar from './NavBar';
-import '../styles/SobreNosotros.css';
 import sobreNosotros from '/public/sobre-nosotros.jpg';
+import '../styles/SobreNosotros.css';
 
 const SobreNosotros = () => {
     return (
