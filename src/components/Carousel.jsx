@@ -8,20 +8,19 @@ import NavbarBotton from './NavbarBotton';
 import Footer from './Footer';
 import '../styles/Carousel.css';
 
-// Componente principal llamado Carousel
 const Carousel = ({
-    vista,               // Prop para saber si debe mostrarse el formulario o la tabla
-    agregarSocio,        // Función para agregar un nuevo socio
-    socioEditado,        // Objeto con los datos del socio que se está editando
-    actualizarSocio,     // Función para actualizar un socio existente
-    modoEdicion,         // Booleano que indica si estamos en modo edición
-    cancelarEdicion,     // Función para cancelar la edición
-    socios,              // Array de todos los socios
-    eliminarSocio,       // Función para eliminar un socio
-    editarSocio          // Función para cargar los datos del socio a editar
+    vista,
+    agregarSocio,
+    socioEditado,    
+    actualizarSocio, 
+    modoEdicion,      
+    cancelarEdicion, 
+    socios,       
+    eliminarSocio,     
+    editarSocio   
 }) => {
-    const formRef = useRef(null); // Referencia al formulario, usada para hacer scroll
-    const tablaRef = useRef(null); // Referencia a la tabla, usada para hacer scroll
+    const formRef = useRef(null);
+    const tablaRef = useRef(null); 
 
     // useEffect que se ejecuta cada vez que cambia la vista
     // Si vista es 'formulario', hace scroll hacia el formulario
@@ -44,7 +43,6 @@ const Carousel = ({
         formRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Renderizado del componente
     return (
         <>
             <NavBar />
@@ -57,10 +55,9 @@ const Carousel = ({
                     </div>
                 </section>
 
-                {/* Sección de horarios del gimnasio */}
+                {/* Sección de banner */}
                 <section>
                     <BannerHome />
-                    {/* <HorariosGym /> */}
                 </section>
 
                 {/* Sección con efecto parallax antes del formulario */}
