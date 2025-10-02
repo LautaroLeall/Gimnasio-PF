@@ -13,40 +13,61 @@ const Footer = () => {
         </div>
 
         <div className="footer-links-section">
-          {/* Aquí puedes agregar enlaces, información de contacto, redes sociales, etc. */}
+
           <div className="footer-column">
             <h3>Navegación</h3>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#planes">Planes</a></li>
-              <li><a href="#equipo">Equipo</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="#nosotros">SobreNosotros</a></li>
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+              <li>
+                <a href="#banner-home">Home</a>
+              </li>
+              <li>
+                <a href="/planes#planes">Planes</a>
+              </li>
+              <li>
+                <a href="/coaches#equipo">Equipo</a>
+              </li>
+              <li>
+                <a href="/sedes#sedes">Sedes</a>
+              </li>
+              <li>
+                <a href="/sobre-nosotros">Sobre Nosotros</a>
+              </li>
             </ul>
           </div>
+
           <div className="footer-column">
             <h3>Síguenos</h3>
-            <ul>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-            <hr />
-            <ul>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <div className="d-flex flex-wrap justify-content-center gap-5">
+              <div className="col-gonzalo">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/gonchi_martinezz/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/GonzaloMartinezz" target="_blank" rel="noopener noreferrer">Github</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/gonzalomartinezz2004/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
 
-            </ul>
+              <div className="col-lautaro">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/lautaro_leall" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LautaroLeall" target="_blank" rel="noopener noreferrer">Github</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/lauldp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="footer-column">
-            <h3>Contacto</h3>
-            <p>Dirección: Calle Falsa 123</p>
-            <p>Teléfono: +54 9 11 1234-5678</p>
-            <p>Email: info@tudominio.com</p>
-          </div>
+
         </div>
       </div>
       <div className="footer-bottom">

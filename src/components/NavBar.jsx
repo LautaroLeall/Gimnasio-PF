@@ -81,7 +81,7 @@ const NavBar = () => {
                     {/* Contenedor Colapsable */}
                     <div className="collapse navbar-collapse" id="navbarNavContent">
                         {/* GRUPO DE BOTONES CENTRALES */}
-                        <ul className="navbar-nav navbar-center w-100 justify-content-center gap-5">
+                        <ul className="navbar-nav navbar-center w-100 justify-content-center">
                             <li className="nav-item">
                                 <button className="btn-navbar-link btn" onClick={() => navigate('/sedes')}>
                                     Sedes

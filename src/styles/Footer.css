@@ -1,9 +1,8 @@
 /* src/styles/Footer.css */
 .footer-container {
-  background-color: #111; 
+  background-color: #111;
   color: #fff;
   padding: 50px 20px 20px;
-  font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
@@ -24,7 +23,7 @@
 }
 
 .footer-logo {
-  height:15rem;
+  height: 13rem;
 }
 
 .footer-links-section {
@@ -45,7 +44,7 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #fff;
-  border-bottom: 2px solid #3fc91c; 
+  border-bottom: 2px solid #3fc91c;
   padding-bottom: 5px;
 }
 
@@ -59,8 +58,7 @@
   margin-bottom: 5px;
 }
 
-.footer-column a,
-.footer-column p {
+.footer-column a{
   color: #aaa;
   text-decoration: none;
   font-size: 0.95rem;
@@ -81,19 +79,26 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
   }
+
+  .footer-logo {
+    height: 7rem;
+  }
+
   .footer-logo-section {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     justify-content: center;
   }
+
   .footer-links-section {
     justify-content: center;
     text-align: center;
   }
+
   .footer-column {
     margin-bottom: 20px;
   }
