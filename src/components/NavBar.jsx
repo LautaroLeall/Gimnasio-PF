@@ -11,7 +11,7 @@ const NavBar = () => {
     const [isFixed, setIsFixed] = useState(false);
     const navbarRef = useRef(null);
     const lastScroll = useRef(0);
-    const ticking = useRef(false);
+    const ticking = useRef(false)
     const hideThreshold = 100;
 
     useEffect(() => {
