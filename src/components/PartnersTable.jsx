@@ -57,7 +57,7 @@ const PartnersTable = ({ socios, eliminarSocio, editarSocio, scrollToForm }) => 
                                 <td className="content-table">{socio.horario}</td>
                                 <td className="content-table">
                                     {/* Usamos la función handleEditar para editar y hacer scroll */}
-                                    <button className="btn btn-warning btn-sm me-2" onClick={() => handleEditar(socio.id)}>
+                                    <button className="btn btn-warning btn-sm me-3" onClick={() => handleEditar(socio.id)}>
                                         Editar
                                     </button>
                                     <button className="btn btn-danger btn-sm" onClick={() => confirmarEliminacion(socio.id)}>
