@@ -4,6 +4,10 @@ import '../styles/Sedes.css';
 import NavBar from './NavBar';
 import BannerSedes from './BannerSedes';
 import Footer from './Footer';
+import  imgSedes1 from '/sedes/imgsedes1.jpg';
+import  imgSedes2 from '/sedes/imgsedes2.jpg';
+import  imgSedes3 from '/sedes/imgsedes3.jpg';
+import  imgSedes4 from '/sedes/imgsedes4.jpg';
 
 const gymLocations = [
   {
@@ -17,7 +21,7 @@ const gymLocations = [
       sabados: '09:00 - 13:30 / 16:00 - 20:00',
     },
     image:
-      'https://images.unsplash.com/photo-1544367500-2d8869c9431f?q=80&w=2670&auto=format&fit=crop',
+      imgSedes1, 
   },
   {
     id: 'peron',
@@ -30,7 +34,7 @@ const gymLocations = [
       sabados: '09:00 - 13:30 / 16:00 - 20:00',
     },
     image:
-      'https://images.unsplash.com/photo-1574680096145-af07c6b44a86?q=80&w=2670&auto=format&fit=crop',
+      imgSedes2,
   },
   {
     id: 'barrio-sur',
@@ -43,7 +47,7 @@ const gymLocations = [
       sabados: '10:00 - 14:00',
     },
     image:
-      'https://images.unsplash.com/photo-1594027154057-c7d579a2d397?q=80&w=2670&auto=format&fit=crop',
+       imgSedes3,
   },
   {
     id: 'aconquija',
@@ -56,7 +60,7 @@ const gymLocations = [
       sabados: '09:00 - 13:00',
     },
     image:
-      'https://images.unsplash.com/photo-1530952463394-24941f3b81a0?q=80&w=2670&auto=format&fit=crop',
+      imgSedes4,
   },
 ];
 
