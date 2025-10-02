@@ -6,10 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif, 'work sans', sans-serif;
-}
-
-body {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /* Barra de scroll  */
