@@ -3,7 +3,7 @@ import ImageBenjamin from "/public/coaches/BenjaminZelaya.png";
 import ImageGonzalo from "/public/coaches/GonzaloMartinez.png";
 import ImageSantiago from "/public/coaches/SantiagoCoronel.png";
 import ImageMateo from "/public/coaches/MateoGonzalez.png";
-import ImageMartina from "/public/coaches/MartinaGomez.png";
+import ImageMartina from "/public/coaches/MartinaGimenez.png";
 import ImageClaudio from "/public/coaches/ClaudioCespedes.png";
 import ImageCarlos from "/public/coaches/CarlosDiaz.png";
 
@@ -40,7 +40,7 @@ const coachesData = [
         imagen: ImageMateo
     },
     {
-        nombre: "Martina Gómez",
+        nombre: "Martina Gimenez",
         especialidad: "Zumba",
         descripcion: "Combina baile, diversión y fitness para transformar tu energía.",
         imagen: ImageMartina

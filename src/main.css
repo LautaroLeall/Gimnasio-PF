@@ -8,10 +8,6 @@
     font-family: 'Poppins', sans-serif, 'work sans', sans-serif;
 }
 
-body {
-    overflow: hidden;
-}
-
 /* Barra de scroll  */
 /* Para que en sobre nosotros no se cambie el navbar */
 html {

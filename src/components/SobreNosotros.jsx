@@ -1,18 +1,18 @@
 // src/components/SobreNosotros.jsx
 import React from 'react';
 import NavBar from './NavBar';
-import '../styles/SobreNosotros.css';
 import sobreNosotros from '/public/sobre-nosotros.jpg';
+import '../styles/SobreNosotros.css';
 
 const SobreNosotros = () => {
     return (
         <>
             <NavBar />
-            <div className="producto-container d-flex align-items-center text-light my-5 mx-5">
+            <div className="producto-container d-flex align-items-center text-light mx-5">
 
-                <div className="detalles d-flex flex-column gap-2 rounded-5 p-3 mt-5">
-                    <div className="title text-center">
-                        <h1 className="title">GONZALO MARTINEZ</h1>
+                <div className="detalles d-flex flex-column gap-2 rounded-5 p-3">
+                    <div className="title-about text-center">
+                        <h1 className="title-about">GONZALO MARTINEZ</h1>
                     </div>
                     <div className="info">
                         <p>Estudiante de Desarrollo y Calidad de Software en la Universidad del Norte Santo Tomás de Aquino.</p>
@@ -59,8 +59,8 @@ const SobreNosotros = () => {
                 </div>
 
                 <div className="detalles d-flex flex-column gap-2 rounded-5 p-3">
-                    <div className="title text-center">
-                        <h1 className="title">LAUTARO LEAL</h1>
+                    <div className="title-about text-center">
+                        <h1 className="title-about">LAUTARO LEAL</h1>
                     </div>
                     <div className="info">
                         <p>Estudiante de Desarrollo y Calidad de Software en la Universidad del Norte Santo Tomás de Aquino.</p>

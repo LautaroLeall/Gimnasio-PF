@@ -1,16 +1,15 @@
 /* src/styles/Coaches.css */
+/* Info header */
 .container-info-coaches {
     padding: 50px;
 }
 
-/* Línea separadora entre textos */
 .linea-separadora {
     background-color: #10db2b;
     height: 3px;
     transform: rotate(90deg);
 }
 
-/* Título de coaches */
 .text-coaches {
     font-size: 3rem;
     font-weight: 700;
@@ -36,13 +35,13 @@
     letter-spacing: 0.1rem;
 }
 
+/* Contenedor principal de cards */
 .container-coaches {
     max-width: 90%;
     margin: auto;
 }
 
-/* CARDS */
-/* BTN Coaches */
+/* BOTONES FILTROS */
 .btn-coaches {
     background-color: transparent;
     color: #888;
@@ -52,7 +51,7 @@
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .btn-coaches.btn-active {
@@ -66,14 +65,16 @@
     color: #fff;
 }
 
-/* Contenedor general de cada coach */
+/* CARDS */
 .coach-card {
     padding: 20px;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .coach-card:hover {
-    transform: scale(0.95);
+    transform: scale(0.99);
     z-index: 2;
 }
 
@@ -84,7 +85,6 @@
     border-radius: 10px;
 }
 
-/* Imagen con filtro por defecto */
 .coach-img {
     width: 100%;
     height: 100%;
@@ -94,20 +94,19 @@
     border-radius: 10px;
 }
 
-/* Imagen en color + zoom solo en modo carrusel */
+/* Solo en modo carousel (slide central) aplicamos zoom */
 .carousel-mode.active .coach-img {
     filter: grayscale(0%);
     transform: scale(1.1);
 }
 
-/* Imagen en color normal para modo filtrado */
+/* En modo filtrado no queremos zoom (evita corte) */
 .filtered-container .coach-card.active .coach-img {
     filter: grayscale(0%);
     transform: scale(1);
-    /* Evita el zoom */
 }
 
-/* Overlay con info */
+/* overlay */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -129,7 +128,6 @@
     opacity: 1;
 }
 
-/* Texto del overlay */
 .overlay h5 {
     margin: 0 0 5px;
     font-weight: 600;
@@ -143,7 +141,7 @@
     font-size: 1rem;
 }
 
-/* Cards en modo filtrado */
+/* filtered grid */
 .filtered-container {
     display: flex;
     justify-content: center;
@@ -157,17 +155,16 @@
     padding: 10px;
 }
 
-/* ANIMACIONES */
-/* Wrapper animado para las cards filtradas */
+/* Animación: fade + zoom (wrapper) */
 .fade-zoom-wrapper {
-    transition: all 0.6s ease-in-out;
+    transition: all 0.55s ease-in-out;
     opacity: 1;
     transform: scale(1);
 }
 
 .fade-zoom-wrapper.fade-out {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
     pointer-events: none;
 }
 
@@ -180,8 +177,10 @@
 @media (max-width: 768px) {
     .coach-img {
         height: 300px;
+        object-fit: cover;
     }
 
+    /* altura fija en mobile */
     .overlay {
         padding: 10px;
     }
@@ -192,5 +191,14 @@
 
     .overlay p {
         font-size: 0.85rem;
+    }
+
+    .container-info-coaches {
+        padding: 20px;
+    }
+
+    .filtered-container .coach-card {
+        flex: 0 0 90%;
+        max-width: 90%;
     }
 }

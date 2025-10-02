@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.banner-title {
+.banner-coaches-title {
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.2;
@@ -19,11 +19,11 @@
   text-transform: uppercase;
 }
 
-.banner-title .highlight {
+.banner-coaches-title .highlight {
   color: #10db2b;
 }
 
-.banner-description {
+.banner-coaches-description {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
@@ -34,7 +34,7 @@
   text-shadow: 1px 0px 1px rgba(64, 255, 0, 0.4);
 }
 
-.banner-button {
+.banner-coaches-button {
   background-color: #10db2b;
   color: #121212;
   border: none;
@@ -51,39 +51,4 @@
 .banner-button:hover {
   background-color: #0f8c1f;
   transform: translateY(-2px);
-}
-
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-  .banner-title {
-    font-size: 2.5rem;
-  }
-
-  .banner-description {
-    font-size: 1rem;
-  }
-
-  .banner-button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-
-  .banner-container {
-    padding: 6rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-title {
-    font-size: 1.8rem;
-  }
-
-  .banner-description {
-    font-size: 0.9rem;
-  }
-
-  .banner-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
 }

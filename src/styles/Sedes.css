@@ -1,11 +1,14 @@
 /* src/styles/Sedes.css */
+/* Reset y tipografía */
 .container-info-sedes {
   padding: 80px 20px;
   color: #fff;
   text-align: center;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Títulos */
 .title-section {
   text-align: center;
   margin-bottom: 3rem;
@@ -40,6 +43,7 @@
   justify-content: center;
   gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .location-button {
@@ -51,7 +55,7 @@
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .location-button.active {
@@ -73,20 +77,29 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
+  align-items: stretch;
 }
 
 .location-image-container {
   flex: 1;
   min-width: 50%;
   position: relative;
+  /* Se asegura que la imagen tenga una altura consistente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
 }
 
+/* Imagen de la sede */
 .location-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
+/* Detalles de la sede */
 .location-details {
   flex: 1;
   padding: 2.5rem;
@@ -101,6 +114,8 @@
   background-color: #02680691;
   color: #ccc;
   margin: 0 0 0.5rem;
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .location-details__address {
@@ -178,20 +193,47 @@
   border-color: #02680691;
 }
 
-/* Media Queries para diseño responsive */
+/* ANIMACIÓN */
+.location-info-wrapper {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Clase aplicada al hacer "salida" (fade-out + slight scale down) */
+.location-info-wrapper.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+  /* evita clicks mientras anima */
+}
+
+/* Clase para cuando aparece */
+.location-info-wrapper.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Ajustes para evitar recorte/zoom no deseado */
+.location-image,
+.location-image-container img {
+  transform: none !important;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .location-info-section {
     flex-direction: column;
   }
-}
 
-@media (max-width: 600px) {
-  .title-section__main {
-    font-size: 2rem;
+  .location-image-container {
+    min-width: 100%;
+    height: 320px;
   }
 
-  .title-section__sub {
-    font-size: 1.2rem;
+  .location-image {
+    height: 100%;
+    object-fit: cover;
   }
 
   .location-details {
@@ -200,5 +242,16 @@
 
   .location-details__actions {
     flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-section-sedes {
+    font-size: 2rem;
+  }
+
+  .subtitle-section-sedes {
+    font-size: 1.1rem;
   }
 }
