@@ -1,4 +1,8 @@
 /* src/styles/Form.css */
+.form-turnos {
+    width: 75%;
+}
+
 .select-clases,
 .input-turno,
 .btn-turnos {
@@ -36,4 +40,11 @@
 .option-clases {
     color: #1c7100;
     text-shadow: 0px 1px 5px #90f372;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .form-turnos {
+        width: 100%;
+    }
 }

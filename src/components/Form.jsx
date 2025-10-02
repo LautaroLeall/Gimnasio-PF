@@ -13,13 +13,13 @@ const clasesDisponibles = {
 
 // Componente Form recibe props para manejar socios
 const Form = ({
-    agregarSocio,        // Función para agregar nuevo socio
-    socioEditado,        // Datos del socio que está siendo editado
-    actualizarSocio,     // Función para actualizar datos de un socio
-    modoEdicion,         // Indica si estamos editando o creando
-    cancelarEdicion,     // Función para cancelar edición
-    socios,              // Lista de todos los socios actuales
-    scrollToTabla        // Función para hacer scroll hacia la tabla luego de registrar
+    agregarSocio,  
+    socioEditado,      
+    actualizarSocio,  
+    modoEdicion,        
+    cancelarEdicion,   
+    socios,             
+    scrollToTabla
 }) => {
     // Estado local para manejar los campos del formulario
     const [formData, setFormData] = useState({
@@ -93,7 +93,7 @@ const Form = ({
 
     return (
         <div className="content-form d-flex flex-column align-items-center">
-            <form onSubmit={handleSubmit} className="form-turnos p-4 w-75 my-5">
+            <form onSubmit={handleSubmit} className="form-turnos p-4 my-5">
                 {/* Selector de clase */}
                 <div className="mb-3">
                     <select className="form-select select-clases" name="clase" value={formData.clase} onChange={handleChange} required>
