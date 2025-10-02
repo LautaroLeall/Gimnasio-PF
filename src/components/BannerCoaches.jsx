@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/BannerCoaches.css';
 
-const Banner = () => {
+const BannerCoaches = () => {
   return (
     <div className="banner-container">
       <div className="banner-content">
@@ -23,4 +23,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerCoaches;
