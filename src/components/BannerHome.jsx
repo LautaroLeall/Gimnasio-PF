@@ -15,12 +15,12 @@ const BannerHome = () => {
 
           <div className="col-md-5">
             <div className="banner-split__content">
-              <h1 className="banner-title">
+              <h1 className="banner-home-title">
                 ENTRENADORES EXPERTOS PARA
                 <br />
-                <span className="banner-highlight">MAXIMIZAR TU RENDIMIENTO</span>
+                <span className="banner-home-highlight">MAXIMIZAR TU RENDIMIENTO</span>
               </h1>
-              <p className="banner-description mt-5 mb-5 m-0">
+              <p className="banner-home-description mt-5 mb-5 m-0">
                 Accede al plan más completo de LG GYM. Sumate a nuestro programa de entrenamiento personalizado:
               </p>
             </div>
