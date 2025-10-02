@@ -1,6 +1,6 @@
 /* src/styles/SobreNosotros.css */
 .producto-container {
-  height: 50em;
+  height: 85vh;
 }
 
 .detalles {
@@ -8,10 +8,10 @@
   border: 2px solid #10db2b;
 }
 
-.title {
+.title-about {
   font-weight: 1000;
   letter-spacing: 7px;
-  font-size: 2.2em;
+  font-size: 1.8rem;
   color: #13200f;
   text-shadow: 0px 0px 3px rgba(64, 255, 0, 1);
 }
@@ -75,28 +75,39 @@
   filter: grayscale(0);
 }
 
-/* AQUI DEBERIA DE SOLUCIONAR EL PROBLEMA QUE HAY EN EL NAVBAR DEL SOBRENOSOTROS */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  .navbar {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
+/* RESPONSIVE */
+@media (max-width: 640px) {
   .producto-container {
+    margin-top: 2rem;
     flex-direction: column;
   }
 
-  @media screen and (max-width: 768px) {
-    .galeria {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
   .detalles {
-    display: none;
+    border: 1px solid #10db2b;
+  }
+
+  .title-about {
+    font-weight: 600;
+    letter-spacing: 6px;
+    font-size: 1.4rem;
+  }
+
+  .title-secondary {
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+
+  .galeria {
+    max-width: 19rem;
+    margin: 2rem;
+  }
+
+  .imagen-principal {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imagen-principal img {
+    filter: grayscale(0);
   }
 }
