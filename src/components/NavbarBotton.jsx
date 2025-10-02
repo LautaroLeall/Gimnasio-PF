@@ -1,7 +1,7 @@
 // src/components/NavbarBotton.jsx
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import '../styles/Navbar.css';
+import '../styles/NavbarBotton.css';
 
 const NavbarBotton = () => {
     const navigate = useNavigate();
