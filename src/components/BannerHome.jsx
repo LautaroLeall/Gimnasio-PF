@@ -8,19 +8,19 @@ const BannerHome = () => {
 
   return (
     // Contenedor principal con una clase específica para esta sección
-    <section className="banner-split">
+    <section className="banner-split" id="banner-home">
       <div className="container text-white">
 
         <div className="row justify-content-center align-items-center min-vh-100">
 
           <div className="col-md-5">
             <div className="banner-split__content">
-              <h1 className="banner-title">
+              <h1 className="banner-home-title">
                 ENTRENADORES EXPERTOS PARA
                 <br />
-                <span className="banner-highlight">MAXIMIZAR TU RENDIMIENTO</span>
+                <span className="banner-home-highlight">MAXIMIZAR TU RENDIMIENTO</span>
               </h1>
-              <p className="banner-description mt-4">
+              <p className="banner-home-description mt-5 mb-5 m-0">
                 Accede al plan más completo de LG GYM. Sumate a nuestro programa de entrenamiento personalizado:
               </p>
             </div>
@@ -39,7 +39,7 @@ const BannerHome = () => {
                 <li>Seguimiento 1 a 1 + Planificación estratégica de entrenamiento, nutrición y alimentación, dieta y ejercicios</li>
               </ul>
 
-              <p className="banner-mission">
+              <p className="banner-mission m-0">
                 El método más efectivo para lograr tu mejor versión, con foco, seguimiento y resultados reales.
                 <br />
                 Enfócate, entrena y logra resultados reales.

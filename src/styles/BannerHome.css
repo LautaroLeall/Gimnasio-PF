@@ -1,5 +1,5 @@
 /* src/styles/BannerHome.css */
-.banner-title {
+.banner-home-title {
   font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -8,17 +8,14 @@
   letter-spacing: 2px;
 }
 
-.banner-highlight {
+.banner-home-highlight {
   color: #18e63b;
   font-weight: 700;
 }
 
-.banner-description {
+.banner-home-description {
   font-size: 1.1rem;
   color: #bbbbbb;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  line-height: 1.6;
 }
 
 .banner-features {
@@ -50,7 +47,6 @@
   font-style: italic;
   color: #888;
   margin-bottom: 30px;
-  line-height: 1.7;
   text-align: left;
 }
 
@@ -89,30 +85,18 @@
   border: 1px solid #50614b;
 }
 
-@media (max-width: 992px) {
-  .banner-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 640px) {
   .banner-split {
+    margin: 3rem 1rem;
     text-align: center;
-    /* Centra todo el texto en móvil */
   }
 
-  .banner-split__content {
-    margin-bottom: 40px;
-    /* Espacio entre el título y la caja de detalles */
+  .banner-home-title {
+    font-size: 2.3rem;
   }
 
-  .banner-title {
-    font-size: 2.2rem;
-  }
-
-  .banner-features,
-  .banner-mission {
-    text-align: left;
-    /* Mantenemos el texto de la caja alineado a la izquierda */
+  .banner-home-description {
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
   }
 }
