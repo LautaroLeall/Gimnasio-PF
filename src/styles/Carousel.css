@@ -1,6 +1,6 @@
 /* src/styles/Carousel.css */
 .title-img {
-    font-size: 5em;
+    font-size: 5rem;
     text-align: center;
     color: rgba(300, 300, 300, 0.6);
     font-weight: bold;
@@ -30,11 +30,29 @@
 }
 
 .parallax-inner {
-    padding: 13% 0;
+    padding: 50vh 0;
 }
 
-@media screen and (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 640px) {
     .title-img {
-        font-size: 2em;
+        font-size: 2.5rem;
+    }
+
+    .parallax-2 {
+        background: url('/public/imagen2-phone.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .parallax-2,
+    .parallax-3 {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .parallax-inner {
+        padding: 35vh 0;
     }
 }
