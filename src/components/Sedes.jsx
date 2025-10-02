@@ -91,7 +91,7 @@ const Sedes = () => {
     <>
       <NavBar />
 
-      <div className="container-fluid container-info-sedes text-white">
+      <div className="container-fluid container-info-sedes text-white" id="sedes">
         <div className="title-section">
           <h2 className="title-section-sedes">4  SEDES EN TUCUMÁN</h2>
           <h3 className="subtitle-section-sedes">SIEMPRE CERCA TUYO</h3>

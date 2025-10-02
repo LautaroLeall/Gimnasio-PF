@@ -142,7 +142,7 @@ const Coaches = () => {
             </div>
 
             {/* Cards: wrapper con clase que controla la animación fade+zoom */}
-            <div className={`container-coaches fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`}>
+            <div className={`container-coaches fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`} id="equipo">
                 {filtro === "Todos" ? (
                     <Slider key="slider" ref={sliderRef} {...settings}>
                         {entrenadoresFiltrados.map((coach, index) => (
