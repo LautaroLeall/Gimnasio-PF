@@ -15,13 +15,6 @@ const BannerPlanes = () => {
       </div>
 
       <div className="banner-planes-right">
-        {/* Aquí se ubicaría una imagen o elemento visual si fuera necesario,
-            pero basándonos en screengym001.png, este lado está dedicado a
-            los beneficios o detalles del servicio.
-            En tu caso, la imagen screengym003.png parece ser solo texto.
-            Adaptamos la estructura para que se parezca a la imagen 001 pero
-            con la información textual del lado derecho de la imagen 003. */}
-
         <div className="banner-planes-features">
           <div className="banner-feature-item">
             <div className="feature-icon-container green-icon">
