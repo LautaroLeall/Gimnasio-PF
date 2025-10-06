@@ -31,7 +31,7 @@ const planesData = {
       isFeatured: true
     }
   ],
-  'YERBA BUENA': [
+  'BARRIO SUR': [
     {
       title: 'MENSUAL',
       subtitle: 'PLAN FLEXIBLE',
@@ -56,7 +56,7 @@ const planesData = {
       isFeatured: true
     }
   ],
-  'BARRIO SUR': [
+  'PERON': [
     {
       title: 'MENSUAL',
       subtitle: 'PLAN ESENCIAL',
@@ -80,7 +80,7 @@ const planesData = {
       isFeatured: true
     }
   ],
-  'TAFÍ VIEJO': [
+  'AVENIDA ACONQUIJA': [
     {
       title: 'MENSUAL',
       subtitle: 'PLAN INICIAL',
@@ -102,31 +102,6 @@ const planesData = {
       subtitle: 'PLAN TOTAL',
       price: '$380.000',
       description: 'La opción de mayor ahorro y beneficios exclusivos.',
-      isFeatured: true
-    }
-  ],
-  'TERRAZAS': [
-    {
-      title: 'MENSUAL',
-      subtitle: 'PLAN BASE',
-      price: '$60.000',
-      description: 'Acceso a las instalaciones del gimnasio Terrazas.',
-      isFeatured: false
-    },
-
-    {
-      title: 'TRIMESTRAL',
-      subtitle: 'PLAN PREMIUM',
-      price: '$150.000',
-      description: 'Incluye acceso a clases especiales y servicios adicionales.',
-      isFeatured: false
-    },
-
-    {
-      title: 'SEMESTRAL',
-      subtitle: 'TODO INCLUIDO',
-      price: '$250.000',
-      description: 'Acceso ilimitado y personalizado con un entrenador.',
       isFeatured: true
     }
   ],
