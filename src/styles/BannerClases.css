@@ -1,12 +1,12 @@
 /* src/styles/BannerClases.css */
 .bc-container {
     color: #fff;
-    padding: 8rem;
+    padding: 9rem;
 }
 
 /* layout principal */
 .bc-inner {
-    padding: 0 4rem;
+    padding: 0 8rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,7 +19,7 @@
 
 .bc-title {
     margin: 0 0 18px 0;
-    font-size: 44px;
+    font-size: 40px;
     line-height: 1.02;
     color: #10db2b;
     font-weight: 800;
@@ -32,7 +32,7 @@
     font-size: 40px;
     line-height: 1.02;
     color: #cfe7cb;
-    font-weight: 600;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -41,36 +41,44 @@
     margin: 0 0 22px 0;
     color: #cfe7cb;
     font-size: 1.02rem;
-    max-width: 680px;
+    max-width: 700px;
     line-height: 1.6;
 }
 
 .bc-cta {
     display: inline-block;
-    background: #10db2b;
-    color: #061306;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-weight: 800;
+    background-color: #00cc00;
+    color: #fff;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(16, 219, 43, 0.12);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    border: 2px solid #00cc00;
+}
+
+.bc-cta:hover {
+    background-color: #00aa00;
+    border-color: #00aa00;
 }
 
 /* DERECHA */
 .bc-right {
     flex: 0 1 35%;
-    min-width: 260px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
 /* LISTA DE FEATURES: cajas oscuras con borde sutil */
 .bc-features {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 6px;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .bc-feature {
@@ -82,6 +90,15 @@
     border-radius: 10px;
     border: 1px solid rgba(16, 219, 43, 0.03);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.36);
+    transition: transform 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease;
+}
+
+.bc-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(2, 120, 30, 0.06);
+    border-color: rgba(16, 219, 43, 0.1);
 }
 
 .bc-feature-icon {
@@ -113,14 +130,25 @@
 /* RESPONSIVE: apilar en pantallas pequeñas */
 @media (max-width: 992px) {
     .bc-container {
-        padding: 6rem 2rem;
+        padding: 6rem 0.5rem;
     }
 
     .bc-inner {
-        padding: 0 2rem;
+        padding: 0 2.5rem;
     }
 
     .bc-cta {
         margin: 1rem 0;
+    }
+}
+
+/* RESPONSIVE: apilar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .bc-container {
+        padding: 2rem 0rem;
+    }
+
+    .bc-inner {
+        padding: 0 1rem;
     }
 }

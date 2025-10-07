@@ -1,11 +1,9 @@
 // src/components/BannerHome.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/BannerHome.css';
 
 const BannerHome = () => {
-  const navigate = useNavigate(); 
-
   return (
     // Contenedor principal con una clase específica para esta sección
     <section className="banner-split" id="banner-home">
@@ -46,9 +44,9 @@ const BannerHome = () => {
               </p>
 
               <div className="text-center mt-4">
-                <button onClick={() => navigate('/coaches')} className="banner-button">
+                <HashLink smooth to="/coaches#equipo" className="banner-button">
                   Conoce a todo el equipo
-                </button>
+                </HashLink>
               </div>
 
             </div>
