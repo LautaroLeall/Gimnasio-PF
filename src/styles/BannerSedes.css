@@ -1,93 +1,227 @@
 /* src/styles/BannerSedes.css */
-/* NUESTRA MISION */
-.containers-text {
-  padding: 40px;
-  border-radius: 8px;
+.banner-sedes-container {
+  display: flex;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 80px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-sedes-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  max-width: 1900px;
-  width: 100%;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
 }
 
-.mission-section p {
+/* LEFT - misión + servicios */
+.bs-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #00ff00;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 3px;
+  padding: 0.5rem 0;
+}
+
+.bs-lead {
+  font-size: 1.1rem;
+  color: #ccc;
   line-height: 1.6;
-  margin-bottom: 30px;
 }
 
-.mision-title {
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 5px;
-  color: #10db2b;
-}
-
-.services-grid {
+/* grid de servicios */
+.bs-services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.service-item {
-  cursor: grab;
-  padding: 10px;
+/* tarjeta de servicio */
+.bs-service-card {
   display: flex;
-  align-items: center;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 14px;
+  border-radius: 10px;
+  transition: transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+  min-height: 110px;
+}
+
+.bs-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(2, 120, 30, 0.06);
+  border-color: rgba(16, 219, 43, 0.1);
+}
+
+/* icono */
+.bs-service-icon {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(16, 219, 43, 0.12), rgba(16, 219, 43, 0.04));
+  color: #10db2b;
+  font-size: 1.5rem;
+}
+
+/* texto */
+.bs-service-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #eefbe9;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.bs-service-text {
+  margin: 6px 0 0;
+  color: #cfe7cb;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* RIGHT - horarios y CTA */
+.bs-side-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(16, 219, 43, 0.06);
+  display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in-out;
+  gap: 1rem;
 }
 
-.service-item:hover {
-  border: 2px solid #10db2b;
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-}
-
-.service-item h3 {
+.bs-side-title {
+  margin: 0;
   color: #10db2b;
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 1.1em;
-}
-
-.service-item p {
-  font-size: 0.9em;
-  line-height: 1.5;
-}
-
-p {
-  text-align: justify;
-  margin: 0 15px;
-}
-
-/* HORARIOS DE ATENCION */
-.attention-section {
-  border: 2px solid #10db2b;
-  padding: 20px;
-}
-
-.horarios-title {
-  text-align: center;
-  font-weight: 300;
+  text-transform: uppercase;
   letter-spacing: 5px;
-  color: #10db2b;
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.schedule-item {
+/* horarios */
+.bs-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.bs-schedule-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
-  font-size: 1.2em;
-  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  color: #e7f7e7;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
-.schedule-day {
-  font-weight: bold;
+/* CTA */
+.bs-cta {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
 
-@media screen and (max-width: 768px) and (min-width: 350px) {
-  .containers-text {
+.bs-cta-button {
+  background: linear-gradient(90deg, #10db2b, #04901a);
+  color: #062108;
+  box-shadow: 0 8px 20px rgba(16, 219, 43, 0.12);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.bs-cta-button:hover {
+  background: #04901a;
+  box-shadow: 0 14px 34px rgba(16, 219, 43, 0.16);
+}
+
+.bs-cta-note {
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+  color: #cfe7cb;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .banner-sedes-inner {
     grid-template-columns: 1fr;
+  }
+
+  .bs-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bs-side-card {
+    order: 2;
+  }
+
+  .bs-title,
+  .bs-lead {
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .banner-sedes-container {
+    padding: 40px;
+  }
+
+  .bs-services {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bs-service-card {
+    min-height: 100px;
+    padding: 12px;
+  }
+
+  .bs-service-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 22px;
+  }
+
+  .bs-title {
+    font-size: 1.6rem;
+  }
+
+  .bs-lead {
+    font-size: 0.95rem;
+    padding: 0 6px;
+  }
+
+  .banner-sedes-inner {
+    gap: 2rem;
   }
 }

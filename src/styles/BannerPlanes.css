@@ -2,8 +2,7 @@
 .banner-planes-container {
   display: flex;
   color: #fff;
-  font-family: 'Arial', sans-serif;
-  padding: 60px 40px;
+  padding: 80px;
   align-items: center;
   overflow: hidden;
   position: relative; 
@@ -17,8 +16,8 @@
 }
 
 .banner-planes-title {
-  font-size: 2.5rem; /* Tamaño grande, como en la imagen 001 */
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 400;
   text-transform: uppercase;
   color: #00ff00; 
   margin: 0;
@@ -48,7 +47,7 @@
 }
 
 .banner-planes-cta-button:hover {
-  background-color: #00aa00; 
+  background-color: #00aa00;
   border-color: #00aa00;
 }
 
@@ -115,6 +114,10 @@
     flex-direction: column;
     padding: 40px 20px;
   }
+  .banner-planes-description{
+    font-size: 1.2rem;
+    margin: 3rem 0.5rem;
+  }
   .banner-planes-left,
   .banner-planes-right {
     max-width: 100%;
@@ -122,7 +125,7 @@
     text-align: center;
   }
   .banner-planes-title {
-    font-size: 3.5rem;
+    font-size: 2.3rem;
   }
   .banner-planes-cta-button {
     margin-bottom: 30px;
@@ -133,5 +136,6 @@
   }
   .feature-icon-container {
     margin-bottom: 10px;
+    transform: rotate(90deg);
   }
 }

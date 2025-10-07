@@ -27,7 +27,7 @@
 /* RESPONSIVE */
 @media (max-width: 640px) {
     .navbar-bottom {
-        top: 80vh;
+        top: 75vh;
     }
 
     .btn-navbar-botton {

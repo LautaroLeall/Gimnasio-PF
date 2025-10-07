@@ -1,0 +1,72 @@
+import React from 'react';
+import '../styles/BannerClases.css';
+import { FaRunning, FaCalendarAlt, FaUsers } from 'react-icons/fa';
+
+/*
+  COMPONENTE ÚNICO: BannerClases
+  - Izquierda: título grande, descripción y CTA
+  - Derecha: icono circular (clock) y 3 tarjetas con icono + texto
+  - Responsive: se apila en pantallas pequeñas
+*/
+const BannerClases = ({
+  title = 'CLASES GRUPALES:',
+  subtitle = '¡SÚMATE AL MOVIMIENTO!',
+  description = 'Explora nuestra amplia agenda de clases grupales. Es la forma más divertida y efectiva de mantenerte en forma. ¡Hay una clase para cada objetivo!',
+  ctaText = 'Ver Agenda Completa',
+  ctaLink = '#clases',
+  features = [
+    {
+      Icon: FaRunning,
+      title: 'VARIEDAD GARANTIZADA',
+      description: 'Descubre clases desde Yoga y Pilates hasta Box y Crossfit.'
+    },
+    {
+      Icon: FaCalendarAlt,
+      title: 'HORARIOS FLEXIBLES',
+      description: 'Encuentra el momento perfecto para entrenar, mañanas, tardes y noches.'
+    },
+    {
+      Icon: FaUsers,
+      title: 'AMBIENTE MOTIVADOR',
+      description: 'Entrena en grupo con la energía y el apoyo de tus compañeros.'
+    }
+  ],
+
+}) => {
+  return (
+    <section className="bc-container" aria-label="Clases grupales">
+      <div className="bc-inner">
+        {/* IZQUIERDA: título + texto + CTA */}
+        <div className="bc-left">
+          <h2 className="bc-title">{title}</h2>
+          <h2 className="bc-subtitle">{subtitle}</h2>
+          <p className="bc-desc">{description}</p>
+          <a className="bc-cta" href={ctaLink}>{ctaText}</a>
+        </div>
+
+        {/* DERECHA: icono circular superior + lista de features */}
+        <aside className="bc-right" aria-hidden={false}>
+
+          <div className="bc-features">
+            {features.map((f, i) => {
+              const Icon = f.Icon || FaRunning;
+              return (
+                <article className="bc-feature" key={i}>
+                  <div className="bc-feature-icon">
+                    <Icon size={16} />
+                  </div>
+                  <div className="bc-feature-text">
+                    <div className="bc-feature-title">{f.title}</div>
+                    <div className="bc-feature-sub">{f.description}</div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+};
+
+export default BannerClases;

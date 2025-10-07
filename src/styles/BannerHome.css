@@ -85,18 +85,56 @@
   border: 1px solid #50614b;
 }
 
-@media (max-width: 640px) {
-  .banner-split {
-    margin: 3rem 1rem;
-    text-align: center;
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  /* 1. SECCIÓN PRINCIPAL */
+  .row.min-vh-100 {
+    min-height: auto !important;
+    padding: 50px 20px;
   }
 
+  /* Reducimos el tamaño del título principal */
   .banner-home-title {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 15px;
   }
 
   .banner-home-description {
-    font-size: 1.2rem;
-    letter-spacing: 0.3px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 25px 0 40px 0 !important;
+  }
+
+  /* Ocultamos el separador */
+  .banner-split__separator {
+    display: none;
+  }
+
+  /* La lista de características */
+  .banner-features {
+    padding-left: 0;
+    list-style-position: inside;
+    margin-top: 25px;
+  }
+
+  .banner-features li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Párrafo de misión */
+  .banner-mission {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* BOTÓN */
+  .banner-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

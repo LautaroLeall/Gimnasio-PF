@@ -11,17 +11,10 @@ const BannerPlanes = () => {
         <p className="banner-planes-description">
           Descubrí nuestros planes diseñados para potenciar tu rendimiento. En RC Gym, creamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!
         </p>
-        <a href="#planes" className="banner-planes-cta-button">Conoce todos los planes</a>
+        <a href="/sedes#sedes" className="banner-planes-cta-button">Conoce todas nuestas sedes</a>
       </div>
 
       <div className="banner-planes-right">
-        {/* Aquí se ubicaría una imagen o elemento visual si fuera necesario,
-            pero basándonos en screengym001.png, este lado está dedicado a
-            los beneficios o detalles del servicio.
-            En tu caso, la imagen screengym003.png parece ser solo texto.
-            Adaptamos la estructura para que se parezca a la imagen 001 pero
-            con la información textual del lado derecho de la imagen 003. */}
-
         <div className="banner-planes-features">
           <div className="banner-feature-item">
             <div className="feature-icon-container green-icon">
