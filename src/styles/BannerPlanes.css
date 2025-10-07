@@ -2,8 +2,7 @@
 .banner-planes-container {
   display: flex;
   color: #fff;
-  font-family: 'Arial', sans-serif;
-  padding: 60px 40px;
+  padding: 80px;
   align-items: center;
   overflow: hidden;
   position: relative; 
@@ -17,7 +16,7 @@
 }
 
 .banner-planes-title {
-  font-size: 2.5rem; /* Tamaño grande, como en la imagen 001 */
+  font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #00ff00; 
@@ -48,7 +47,7 @@
 }
 
 .banner-planes-cta-button:hover {
-  background-color: #00aa00; 
+  background-color: #00aa00;
   border-color: #00aa00;
 }
 
@@ -138,6 +137,5 @@
   .feature-icon-container {
     margin-bottom: 10px;
     transform: rotate(90deg);
-    
   }
 }
