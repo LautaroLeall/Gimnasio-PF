@@ -2,7 +2,7 @@
 .banner-container {
   position: relative;
   width: 100%;
-  padding: 8rem 2rem;
+  padding: 2rem;
   color: #f8f9fa;
   text-align: center;
   overflow: hidden;
@@ -12,11 +12,12 @@
 }
 
 .banner-coaches-title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: 700;
   text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 5px;
 }
 
 .banner-coaches-title .highlight {
@@ -24,31 +25,45 @@
 }
 
 .banner-coaches-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #50614b;
-  text-shadow: 1px 0px 1px rgba(64, 255, 0, 0.4);
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0.7rem 0;
 }
 
 .banner-coaches-button {
-  background-color: #10db2b;
-  color: #121212;
-  border: none;
-  padding: 1.2rem 2.5rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  display: inline-block;
+  background-color: #00cc00;
+  color: #fff;
+  text-decoration: none;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  padding: 15px 35px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border: 2px solid #00cc00;
 }
 
-.banner-button:hover {
-  background-color: #0f8c1f;
-  transform: translateY(-2px);
+.banner-coaches-button:hover {
+  background-color: #00aa00;
+  border-color: #00aa00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .banner-coaches-title {
+    font-size: 1.8rem;
+    text-align: start;
+  }
+
+  .banner-coaches-description {
+    font-size: 1.1rem;
+    text-align: start;
+    margin: 1rem 0;
+  }
+
+  .banner-coaches-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }

@@ -84,72 +84,57 @@
   border-radius: 15px;
   border: 1px solid #50614b;
 }
-/* ================================================= */
-/* MEDIA QUERY: AJUSTES PARA MÓVILES (Celulares)     */
-/* El punto de corte es el estándar de Bootstrap < 768px */
-/* ================================================= */
 
+/* RESPONSIVE */
 @media (max-width: 767px) {
-    
-    /* 1. SECCIÓN PRINCIPAL: Controlar Altura y Padding */
-    
-    /* Anulamos la altura completa del viewport (min-vh-100) y reintroducimos padding */
-    .row.min-vh-100 {
-        min-height: auto !important; /* Es crucial que esto sobrescriba la altura fija */
-        padding-top: 40px; 
-        padding-bottom: 40px;
-    }
-    
-    /* 2. AJUSTE DE TIPOGRAFÍA Y MÁRGENES (Columna Izquierda) */
-    
-    /* Reducimos el tamaño del título principal */
-    .banner-home-title {
-        font-size: 2rem; 
-        line-height: 1.1;
-        text-align: center;
-        margin-bottom: 15px;
-    }
+  /* 1. SECCIÓN PRINCIPAL */
+  .row.min-vh-100 {
+    min-height: auto !important;
+    padding: 50px 20px;
+  }
 
-    /* Sobrescribimos los grandes márgenes de Bootstrap (mt-5, mb-5) */
-    .banner-home-description {
-        font-size: 0.95rem;
-        text-align: center;
-        margin-top: 20px !important;    /* Anula mt-5 */
-        margin-bottom: 30px !important; /* Anula mb-5 y da espacio al bloque de características */
-    }
-    
-    /* 3. COLUMNA DERECHA (CARACTERÍSTICAS) */
+  /* Reducimos el tamaño del título principal */
+  .banner-home-title {
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
-    /* Ocultamos el separador (aunque Bootstrap ya debería hacerlo con d-none) */
-    .banner-split__separator {
-        display: none !important;
-    }
-    
-    /* La lista de características */
-    .banner-features {
-        /* Eliminamos el padding izquierdo que genera Bootstrap para que la lista esté más centrada */
-        padding-left: 0; 
-        list-style-position: inside; /* Mueve los puntos de lista dentro del contenido */
-        margin-top: 25px;
-    }
-    
-    .banner-features li {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-        text-align: center; /* Centramos los puntos de la lista */
-    }
+  .banner-home-description {
+    font-size: 1rem;
+    text-align: center;
+    margin: 25px 0 40px 0 !important;
+  }
 
-    /* Párrafo de misión */
-    .banner-mission {
-        font-size: 0.8rem;
-        text-align: center;
-        margin-top: 20px !important;
-    }
-    
-    /* 4. BOTÓN */
-    /* Aseguramos que el botón se ajuste bien */
-    .banner-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
+  /* Ocultamos el separador */
+  .banner-split__separator {
+    display: none;
+  }
+
+  /* La lista de características */
+  .banner-features {
+    padding-left: 0;
+    list-style-position: inside;
+    margin-top: 25px;
+  }
+
+  .banner-features li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Párrafo de misión */
+  .banner-mission {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* BOTÓN */
+  .banner-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
