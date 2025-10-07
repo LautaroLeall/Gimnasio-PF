@@ -1,12 +1,12 @@
 /* src/styles/BannerClases.css */
 .bc-container {
     color: #fff;
-    padding: 8rem;
+    padding: 9rem;
 }
 
 /* layout principal */
 .bc-inner {
-    padding: 0 4rem;
+    padding: 0 8rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,7 +19,7 @@
 
 .bc-title {
     margin: 0 0 18px 0;
-    font-size: 44px;
+    font-size: 40px;
     line-height: 1.02;
     color: #10db2b;
     font-weight: 800;
@@ -32,7 +32,7 @@
     font-size: 40px;
     line-height: 1.02;
     color: #cfe7cb;
-    font-weight: 600;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -41,36 +41,42 @@
     margin: 0 0 22px 0;
     color: #cfe7cb;
     font-size: 1.02rem;
-    max-width: 680px;
+    max-width: 700px;
     line-height: 1.6;
 }
 
 .bc-cta {
     display: inline-block;
-    background: #10db2b;
+    background:  #04901a;
     color: #061306;
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 10px 100px;
+    border-radius: 50px;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(16, 219, 43, 0.12);
+    box-shadow: 0 14px 34px rgba(16, 219, 43, 0.16);
+    transition: all 0.3s ease;
+}
+
+.bc-cta:hover {
+    background: #10db2b;;
+      box-shadow: 0 8px 24px rgba(16, 219, 43, 0.12);
 }
 
 /* DERECHA */
 .bc-right {
     flex: 0 1 35%;
-    min-width: 260px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
 /* LISTA DE FEATURES: cajas oscuras con borde sutil */
 .bc-features {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 6px;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .bc-feature {

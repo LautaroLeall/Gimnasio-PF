@@ -13,9 +13,9 @@ const gymLocations = [
   {
     id: 'barrio norte',
     name: 'SEDE BARRIO NORTE',
-    address: 'SAN MARTÍN 453',
+    address: 'SAN MARTÍN 001',
     description:
-      'Entrená en la sede de inicio de JOCKEY GYM, con 25 años de trayectoria formando generaciones de atletas y amantes del fitness. Ubicación estratégica en el corazón de la ciudad.',
+      'LG GYM Central: 25 años de trayectoria en el corazón de la ciudad. Entrená sin desvíos, entrená con expertos.',
     schedule: {
       lunesAViernes: '08:00 - 23:00',
       sabados: '09:00 - 13:30 / 16:00 - 20:00',
@@ -26,7 +26,7 @@ const gymLocations = [
   {
     id: 'barrio-sur',
     name: 'SEDE BARRIO SUR',
-    address: 'CALLE SIEMPRE VIVA 742',
+    address: 'LAS HERAS 001',
     description:
       'Disfruta de nuestras modernas instalaciones en Barrio Sur. Un espacio diseñado para tu bienestar y rendimiento.',
     schedule: {
@@ -39,7 +39,7 @@ const gymLocations = [
   {
     id: 'peron',
     name: 'SEDE PERÓN',
-    address: 'AV. PERÓN 1790',
+    address: 'AV. PERÓN 001',
     description:
       'Entrena en nuestra sede de la Av. Perón y pon a prueba nuestra meta de competir contra el tiempo.',
     schedule: {
@@ -52,7 +52,7 @@ const gymLocations = [
   {
     id: 'aconquija',
     name: 'SEDE AVENIDA ACONQUIJA',
-    address: 'AVENIDA ACONQUIJA 3000',
+    address: 'AVENIDA ACONQUIJA 001',
     description:
       'La sede ideal para quienes buscan entrenar en un entorno dinámico y con equipamiento de última generación sobre la Avenida Aconquija.',
     schedule: {
@@ -97,10 +97,10 @@ const Sedes = () => {
 
       <div className="container-fluid container-info-sedes text-white" id="sedes">
         <div className="title-section">
-          <h2 className="title-section-sedes">4  SEDES EN TUCUMÁN</h2>
-          <h3 className="subtitle-section-sedes">SIEMPRE CERCA TUYO</h3>
+          <h2 className="title-section-sedes">LAS 4 MEJORES SEDES EN TUCUMÁN</h2>
+          <h3 className="subtitle-section-sedes">SIEMPRE CERCA DE USTEDES</h3>
           <p className="description-section-sedes text-center mx-auto">
-            Elegí la sede que más se adapte a vos y entrená sin límites. Siempre cerca, siempre disponible.
+           Máxima libertad y disponibilidad. Elegí tu gimnasio base y disfrutá de la red más grande de la ciudad.
           </p>
 
           <div className="location-buttons my-5">
