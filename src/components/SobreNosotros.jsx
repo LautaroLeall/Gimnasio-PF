@@ -71,13 +71,13 @@ const SobreNosotros = () => {
                     </div>
                     <div className="aboutMy">
                         <p>
-                            Programador trainee de 20 años, apasionado por la tecnología y el aprendizaje constante.
+                            🎓 Estudiante de Desarrollo y Calidad de Software en la UNSTA.
                             <br />
-                            Estudiante de Desarrollo y Calidad de Software en la UNSTA.
+                            👨‍💻 Apasionado por el desarrollo web, el clean code y el trabajo en equipo.
                             <br />
-                            Me defino como un emprendedor en formación, con interés en proyectos reales que impliquen trabajo en equipo, desafíos técnicos y mejora continua.
+                            🔄 Experiencia en proyectos colaborativos aplicando SCRUM y metodologías ágiles.
                             <br />
-                            Con experiencia en metodologías ágiles como SCRUM, destaco por mi enfoque analítico, comunicación efectiva y compromiso con la calidad.
+                            🚀 En constante aprendizaje y construcción de soluciones que suman.
                         </p>
                     </div>
 
