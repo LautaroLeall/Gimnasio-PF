@@ -18,17 +18,17 @@ const BannerClases = ({
     {
       Icon: FaRunning,
       title: 'VARIEDAD GARANTIZADA',
-      description: 'Descubre clases desde Yoga y Pilates hasta Box y Crossfit.'
+      description: 'Descubre clases desde Funcional y Zumba hasta Musculación y Crossfit.Encuentra tu estilo de entrenamiento favorito.'
     },
     {
       Icon: FaCalendarAlt,
       title: 'HORARIOS FLEXIBLES',
-      description: 'Encuentra el momento perfecto para entrenar, mañanas, tardes y noches.'
+      description: 'Encuentra el momento perfecto para entrenar, mañanas, tardes y noches.No hay horarios fijos!'
     },
     {
       Icon: FaUsers,
       title: 'AMBIENTE MOTIVADOR',
-      description: 'Entrena en grupo con la energía y el apoyo de tus compañeros.'
+      description: 'Entrena en grupo con la energía y el apoyo de tus compañeros.Un ambiente motivador para alcanzar tus metas!'
     }
   ],
 
