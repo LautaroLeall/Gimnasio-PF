@@ -89,3 +89,10 @@
   color: #10db2b;
   text-shadow: 0 0 0 5px rgba(16, 219, 43, 0.5);
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 2rem 0.5rem;
+  }
+}
