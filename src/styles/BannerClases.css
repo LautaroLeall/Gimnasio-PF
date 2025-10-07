@@ -1,0 +1,126 @@
+/* src/styles/BannerClases.css */
+.bc-container {
+    color: #fff;
+    padding: 8rem;
+}
+
+/* layout principal */
+.bc-inner {
+    padding: 0 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* IZQUIERDA */
+.bc-left {
+    flex: 1 1 50%;
+    min-width: 280px;
+}
+
+.bc-title {
+    margin: 0 0 18px 0;
+    font-size: 44px;
+    line-height: 1.02;
+    color: #10db2b;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.bc-subtitle {
+    margin: 0 0 18px 0;
+    font-size: 40px;
+    line-height: 1.02;
+    color: #cfe7cb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.bc-desc {
+    margin: 0 0 22px 0;
+    color: #cfe7cb;
+    font-size: 1.02rem;
+    max-width: 680px;
+    line-height: 1.6;
+}
+
+.bc-cta {
+    display: inline-block;
+    background: #10db2b;
+    color: #061306;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(16, 219, 43, 0.12);
+}
+
+/* DERECHA */
+.bc-right {
+    flex: 0 1 35%;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* LISTA DE FEATURES: cajas oscuras con borde sutil */
+.bc-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.bc-feature {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(16, 219, 43, 0.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.36);
+}
+
+.bc-feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(16, 219, 43, 0.08);
+    display: grid;
+    place-items: center;
+    color: #10db2b;
+    flex: 0 0 44px;
+}
+
+.bc-feature-title {
+    font-weight: 800;
+    color: #e9fbe9;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.bc-feature-sub {
+    margin-top: 6px;
+    color: #cfe7cb;
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
+/* RESPONSIVE: apilar en pantallas pequeñas */
+@media (max-width: 992px) {
+    .bc-container {
+        padding: 6rem 2rem;
+    }
+
+    .bc-inner {
+        padding: 0 2rem;
+    }
+
+    .bc-cta {
+        margin: 1rem 0;
+    }
+}
