@@ -1,19 +1,14 @@
+/* src/components/BannerClases.jsx */
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/BannerClases.css';
 import { FaRunning, FaCalendarAlt, FaUsers } from 'react-icons/fa';
 
-/*
-  COMPONENTE ÚNICO: BannerClases
-  - Izquierda: título grande, descripción y CTA
-  - Derecha: icono circular (clock) y 3 tarjetas con icono + texto
-  - Responsive: se apila en pantallas pequeñas
-*/
 const BannerClases = ({
   title = 'CLASES GRUPALES:',
   subtitle = '¡SÚMATE AL MOVIMIENTO!',
   description = 'Explora nuestra amplia agenda de clases grupales. Es la forma más divertida y efectiva de mantenerte en forma. ¡Hay una clase para cada objetivo!',
-  ctaText = 'Ver Agenda Completa',
-  ctaLink = '#clases',
+  ctaText = 'Regístrate Ahora a tu Primer Clase',
   features = [
     {
       Icon: FaRunning,
@@ -41,7 +36,9 @@ const BannerClases = ({
           <h2 className="bc-title">{title}</h2>
           <h2 className="bc-subtitle">{subtitle}</h2>
           <p className="bc-desc">{description}</p>
-          <a className="bc-cta" href={ctaLink}>{ctaText}</a>
+          <HashLink smooth to="/home#form" className="bc-cta">
+            {ctaText}
+          </HashLink>
         </div>
 
         {/* DERECHA: icono circular superior + lista de features */}
