@@ -1,14 +1,13 @@
 /* src/styles/Sedes.css */
-/* Reset y tipografía */
 .container-info-sedes {
-  padding: 80px 20px;
+  padding: 60px 0px;
   color: #fff;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Títulos */
+/* Título */
 .title-section {
   text-align: center;
   margin-bottom: 3rem;
@@ -70,6 +69,7 @@
 }
 
 /* Sección de información de la sede */
+/* Contenedor principal*/
 .location-info-section {
   display: flex;
   background: #1e1e1e;
@@ -78,34 +78,75 @@
   overflow: hidden;
   width: 100%;
   align-items: stretch;
+  gap: 0;
 }
 
+/* Contenedor de la imagen */
 .location-image-container {
-  flex: 1;
+  flex: 1 1 50%;
   min-width: 50%;
   position: relative;
-  /* Se asegura que la imagen tenga una altura consistente */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   background: #111;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  overflow: hidden;
 }
 
-/* Imagen de la sede */
+/* Imagen */
 .location-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
-/* Detalles de la sede */
+/* Detalles */
 .location-details {
-  flex: 1;
+  flex: 1 1 50%;
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 0;
+  /* evita overflow en flex items */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1e1e1e;
+  height: 100%;
+}
+
+/* Card: imagen superior con proporción fija */
+.card .card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .card-image-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card contenido */
+.card .card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1 1 auto;
 }
 
 .location-details__name {
@@ -155,7 +196,7 @@
 
 .location-details__actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 /* Botones de acción */
@@ -200,7 +241,6 @@
   transform: scale(1);
 }
 
-/* Clase aplicada al hacer "salida" (fade-out + slight scale down) */
 .location-info-wrapper.fade-out {
   opacity: 0;
   transform: scale(0.97);
@@ -228,12 +268,13 @@
 
   .location-image-container {
     min-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     height: 320px;
   }
 
   .location-image {
     height: 100%;
-    object-fit: cover;
   }
 
   .location-details {
@@ -247,11 +288,43 @@
 }
 
 @media (max-width: 600px) {
+  .container-info-sedes {
+    padding: 40px 20px;
+  }
+
   .title-section-sedes {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .subtitle-section-sedes {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+
+  .location-details__name {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    margin: 0.8rem;
+  }
+
+  .location-details__address {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .location-details__description {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .location-details__actions {
+    gap: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-secondary {
+    padding: 0.5rem 1rem;
   }
 }

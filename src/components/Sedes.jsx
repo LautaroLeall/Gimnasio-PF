@@ -4,15 +4,15 @@ import '../styles/Sedes.css';
 import NavBar from './NavBar';
 import BannerSedes from './BannerSedes';
 import Footer from './Footer';
-import  imgSedes1 from '/sedes/imgsedes1.jpg';
-import  imgSedes2 from '/sedes/imgsedes2.jpg';
-import  imgSedes3 from '/sedes/imgsedes3.jpg';
-import  imgSedes4 from '/sedes/imgsedes4.jpg';
+import imgSedes1 from '/sedes/imgsedes1.jpg';
+import imgSedes2 from '/sedes/imgsedes2.jpg';
+import imgSedes3 from '/sedes/imgsedes3.jpg';
+import imgSedes4 from '/sedes/imgsedes4.jpg';
 
 const gymLocations = [
   {
-    id: 'centro',
-    name: 'SEDE CENTRO',
+    id: 'barrio norte',
+    name: 'SEDE BARRIO NORTE',
     address: 'SAN MARTÍN 453',
     description:
       'Entrená en la sede de inicio de JOCKEY GYM, con 25 años de trayectoria formando generaciones de atletas y amantes del fitness. Ubicación estratégica en el corazón de la ciudad.',
@@ -21,7 +21,20 @@ const gymLocations = [
       sabados: '09:00 - 13:30 / 16:00 - 20:00',
     },
     image:
-      imgSedes1, 
+      imgSedes1,
+  },
+  {
+    id: 'barrio-sur',
+    name: 'SEDE BARRIO SUR',
+    address: 'CALLE SIEMPRE VIVA 742',
+    description:
+      'Disfruta de nuestras modernas instalaciones en Barrio Sur. Un espacio diseñado para tu bienestar y rendimiento.',
+    schedule: {
+      lunesAViernes: '07:00 - 22:00',
+      sabados: '10:00 - 14:00',
+    },
+    image:
+      imgSedes3,
   },
   {
     id: 'peron',
@@ -35,19 +48,6 @@ const gymLocations = [
     },
     image:
       imgSedes2,
-  },
-  {
-    id: 'barrio-sur',
-    name: 'SEDE BARRIO SUR',
-    address: 'CALLE SIEMPRE VIVA 742',
-    description:
-      'Disfruta de nuestras modernas instalaciones en Barrio Sur. Un espacio diseñado para tu bienestar y rendimiento.',
-    schedule: {
-      lunesAViernes: '07:00 - 22:00',
-      sabados: '10:00 - 14:00',
-    },
-    image:
-       imgSedes3,
   },
   {
     id: 'aconquija',

@@ -147,4 +147,14 @@
         font-size: 1.5rem;
         padding: 0.45rem 0.6rem;
     }
+
+    /* Desactiva todos los efectos hover en mobile */
+    .logo-navbar:hover,
+    .title-navbar:hover,
+    .nav-sobre-nosotros:hover,
+    .btn-navbar-link:hover,
+    .btn-logout:hover {
+        transform: none !important;
+        filter: none !important;
+    }
 }

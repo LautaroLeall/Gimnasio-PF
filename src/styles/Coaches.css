@@ -1,63 +1,34 @@
-/* src/styles/Coaches.css */
-/* Info header */
+/* GENERAL */
 .container-info-coaches {
-    padding: 50px;
+    padding: 60px 40px;
+    text-align: center;
 }
 
-.linea-separadora {
-    background-color: #10db2b;
-    height: 3px;
-    transform: rotate(90deg);
+/* FILTROS */
+.coaches-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
 }
 
-.text-coaches {
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 5px;
-    cursor: context-menu;
-}
-
-.first-text {
-    color: #fff;
-}
-
-.second-text {
-    color: #18e63b;
-}
-
-.third-text {
-    color: #ccc;
-    text-shadow: 0px 0px 2px rgba(64, 255, 0, 0.8);
-    font-size: 1.1rem;
-    font-weight: 200;
-    letter-spacing: 0.1rem;
-}
-
-/* Contenedor principal de cards */
-.container-coaches {
-    max-width: 90%;
-    margin: auto;
-}
-
-/* BOTONES FILTROS */
 .btn-coaches {
     background-color: transparent;
-    color: #888;
-    border: 2px solid #888;
+    color: #ccc;
+    border: 2px solid #666;
     padding: 10px 20px;
     text-transform: uppercase;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
 .btn-coaches.btn-active {
-    background-color: #02680691;
+    background-color: #08a03a;
     color: #fff;
-    border-color: #02680691;
+    border-color: #08a03a;
 }
 
 .btn-coaches:hover:not(.btn-active) {
@@ -66,62 +37,63 @@
 }
 
 /* CARDS */
+.container-coaches {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 .coach-card {
     padding: 20px;
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .coach-card:hover {
-    transform: scale(0.99);
-    z-index: 2;
+    transform: scale(1.02);
 }
 
-/* Imagen + overlay */
 .image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .coach-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease, transform 0.3s ease;
-    border-radius: 10px;
+    filter: grayscale(80%);
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Solo en modo carousel (slide central) aplicamos zoom */
 .carousel-mode.active .coach-img {
     filter: grayscale(0%);
     transform: scale(1.1);
+    box-shadow: 0 1px 5px 2px rgba(16, 219, 43, 0.3);
+    border-radius: 12px;
 }
 
-/* En modo filtrado no queremos zoom (evita corte) */
 .filtered-container .coach-card.active .coach-img {
     filter: grayscale(0%);
-    transform: scale(1);
 }
 
-/* overlay */
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 30px;
     opacity: 0;
     transition: opacity 0.4s ease;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 10px;
 }
 
 .image-container:hover .overlay {
@@ -129,33 +101,30 @@
 }
 
 .overlay h5 {
-    margin: 0 0 5px;
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #08a03a;
 }
 
 .overlay p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-/* filtered grid */
+/* FILTRADO */
 .filtered-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .filtered-container .coach-card {
-    flex: 0 0 360px;
-    max-width: 360px;
-    padding: 10px;
+    flex: 0 0 400px;
 }
 
-/* Animación: fade + zoom (wrapper) */
+/* ANIMACIONES */
 .fade-zoom-wrapper {
     transition: all 0.55s ease-in-out;
     opacity: 1;
@@ -165,7 +134,6 @@
 .fade-zoom-wrapper.fade-out {
     opacity: 0;
     transform: scale(0.96);
-    pointer-events: none;
 }
 
 .fade-zoom-wrapper.fade-in {
@@ -174,15 +142,46 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 992px) {
+    .container-info-coaches {
+        padding: 40px 20px;
+    }
+
+    .coach-card {
+        padding: 10px;
+    }
+
+    .overlay {
+        padding: 15px;
+    }
+}
+
 @media (max-width: 768px) {
+    .container-coaches {
+        padding: 2rem;
+    }
+
+    .container-info-coaches {
+        padding: 20px 10px;
+    }
+
+    .image-container {
+        padding: 2.5rem;
+    }
+
+    .btn-coaches {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
     .coach-img {
-        height: 300px;
+        height: 320px;
         object-fit: cover;
     }
 
-    /* altura fija en mobile */
     .overlay {
-        padding: 10px;
+        margin: 2rem;
+        border-radius: 10px;
     }
 
     .overlay h5 {
@@ -193,15 +192,14 @@
         font-size: 0.85rem;
     }
 
-    .container-info-coaches {
-        padding: 20px;
+    .filtered-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .filtered-container .coach-card {
-        flex: 0 0 90%;
+        flex: 1 1 90%;
         max-width: 90%;
     }
-
-    
-    
 }
