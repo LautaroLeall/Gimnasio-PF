@@ -1,3 +1,4 @@
+/* src/styles/Coaches.css */
 /* GENERAL */
 .container-info-coaches {
     padding: 60px 40px;
@@ -38,18 +39,22 @@
 
 /* CARDS */
 .container-coaches {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 3.5rem;
 }
 
+/* Indicador de estado filtrado */
+.container-coaches.is-filtered {
+    padding-top: 1rem;
+}
+
+/* base card */
 .coach-card {
     padding: 20px;
-    transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .coach-card:hover {
@@ -70,6 +75,7 @@
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+/* zoom para slide activo */
 .carousel-mode.active .coach-img {
     filter: grayscale(0%);
     transform: scale(1.1);
@@ -77,15 +83,13 @@
     border-radius: 12px;
 }
 
-.filtered-container .coach-card.active .coach-img {
-    filter: grayscale(0%);
-}
-
+/* overlay */
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 30px;
@@ -124,6 +128,26 @@
     flex: 0 0 400px;
 }
 
+/* ESTILOS PARA CARDS FILTRADAS*/
+/* estilo general para cards filtradas */
+.coach-card.filtered {
+    box-shadow: 0 18px 40px rgba(2, 120, 30, 0.12);
+    border-radius: 12px;
+    border: 2px solid rgba(16, 219, 43, 0.08);
+}
+
+.coach-card.filtered .image-container {
+    padding: 0;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+/* img de cards filtradas */
+.coach-card.filtered .coach-img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
 /* ANIMACIONES */
 .fade-zoom-wrapper {
     transition: all 0.55s ease-in-out;
@@ -153,7 +177,15 @@
 
     .overlay {
         padding: 15px;
+        height: auto;
+        opacity: 1;
     }
+
+    /* mostrar overlay por defecto en filtradas para dar énfasis */
+    .coach-card.filtered .overlay {
+        margin: 0.3rem 0.4rem;
+    }
+
 }
 
 @media (max-width: 768px) {

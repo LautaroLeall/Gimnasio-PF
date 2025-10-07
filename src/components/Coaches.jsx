@@ -1,3 +1,4 @@
+/* src/components/Coaches.jsx */
 import Slider from "react-slick";
 import { useState, useRef, useEffect } from "react";
 import coachesData from "../api/coachesData";
@@ -95,8 +96,8 @@ const Coaches = () => {
             <div className="container-fluid container-info-coaches text-white">
                 <BannerCoaches />
 
-                {/* Filtros */}
-                <div className="coaches-filtros">
+                {/* FILTROS (sin cambio) */}
+                <div className="coaches-filtros" id="equipo">
                     {["Todos", "Crossfit", "Zumba", "Musculación", "Funcional"].map((tipo) => (
                         <button
                             key={tipo}
@@ -109,9 +110,9 @@ const Coaches = () => {
                     ))}
                 </div>
             </div>
-
-            {/* Sección principal */}
-            <div className={`container-coaches fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"}`} id="equipo">
+            <div
+                className={`container-coaches fade-zoom-wrapper ${mostrarCards ? "fade-in" : "fade-out"} ${filtro !== 'Todos' ? 'is-filtered' : ''}`}
+            >
                 {filtro === "Todos" ? (
                     <Slider key="slider" ref={sliderRef} {...settings}>
                         {entrenadoresFiltrados.map((coach, index) => (
@@ -134,18 +135,28 @@ const Coaches = () => {
                     </Slider>
                 ) : (
                     <div className="filtered-container">
-                        {entrenadoresFiltrados.map((coach, index) => (
-                            <div key={coach.nombre + index} className="coach-card active">
-                                <div className="image-container">
-                                    <img src={coach.imagen} alt={coach.nombre} className="coach-img" />
-                                    <div className="overlay">
-                                        <h5>{coach.nombre}</h5>
-                                        <p><strong>{coach.especialidad}</strong></p>
-                                        <p>{coach.descripcion}</p>
+                        {entrenadoresFiltrados.map((coach, index) => {
+                            const specClass = 'spec-' + coach.especialidad
+                                .toLowerCase()
+                                .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // elimina diacríticos (á -> a)
+                                .replace(/\s+/g, '-')
+                                .replace(/[^a-z0-9-]/g, ''); // aquí el guion no necesita escape
+                            return (
+                                <div
+                                    key={coach.nombre + index}
+                                    className={`coach-card active filtered ${specClass}`}
+                                >
+                                    <div className="image-container">
+                                        <img src={coach.imagen} alt={coach.nombre} className="coach-img" />
+                                        <div className="overlay">
+                                            <h5>{coach.nombre}</h5>
+                                            <p><strong>{coach.especialidad}</strong></p>
+                                            <p>{coach.descripcion}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 )}
             </div>
