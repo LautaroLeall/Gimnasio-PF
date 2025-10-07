@@ -1,6 +1,10 @@
 /* src/styles/SobreNosotros.css */
 .producto-container {
-  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 1rem;
 }
 
 .detalles {
@@ -78,7 +82,7 @@
 /* RESPONSIVE */
 @media (max-width: 640px) {
   .producto-container {
-    margin-top: 2rem;
+    padding: 2rem 0rem;
     flex-direction: column;
   }
 
