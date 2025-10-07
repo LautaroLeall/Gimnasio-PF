@@ -11,7 +11,7 @@ const BannerPlanes = () => {
         <p className="banner-planes-description">
           Descubrí nuestros planes diseñados para potenciar tu rendimiento. En RC Gym, creamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!
         </p>
-        <a href="#planes" className="banner-planes-cta-button">Conoce todos los planes</a>
+        <a href="/sedes#sedes" className="banner-planes-cta-button">Conoce todas nuestas sedes</a>
       </div>
 
       <div className="banner-planes-right">
