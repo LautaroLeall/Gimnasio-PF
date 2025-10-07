@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  /* padding: 2rem 0.5rem; */
   background-color: #121212;
   overflow: hidden;
 }
@@ -89,4 +90,11 @@
 .register-login-link a:hover {
   color: #10db2b;
   text-shadow: 0 0 0 5px rgba(16, 219, 43, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 2rem 0.5rem;
+  }
 }
