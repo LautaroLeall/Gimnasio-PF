@@ -1,5 +1,6 @@
 // src/components/Sedes.jsx
 import { useState, useEffect } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/Sedes.css';
 import NavBar from './NavBar';
 import BannerSedes from './BannerSedes';
@@ -95,15 +96,15 @@ const Sedes = () => {
     <>
       <NavBar />
 
-      <div className="container-fluid container-info-sedes text-white" id="sedes">
+      <div className="container-fluid container-info-sedes text-white">
         <div className="title-section">
           <h2 className="title-section-sedes">LAS 4 MEJORES SEDES EN TUCUMÁN</h2>
           <h3 className="subtitle-section-sedes">SIEMPRE CERCA DE USTEDES</h3>
           <p className="description-section-sedes text-center mx-auto">
-           Máxima libertad y disponibilidad. Elegí tu gimnasio base y disfrutá de la red más grande de la ciudad.
+            Máxima libertad y disponibilidad. Elegí tu gimnasio base y disfrutá de la red más grande de la ciudad.
           </p>
 
-          <div className="location-buttons my-5">
+          <div className="location-buttons my-5" id="sedes">
             {gymLocations.map((location) => (
               <button
                 key={location.id}
@@ -140,9 +141,11 @@ const Sedes = () => {
                 <p><strong>Sábados:</strong> {selectedLocation.schedule.sabados}</p>
               </div>
 
-              <div className="location-details__actions">
-                <button className="btn-secondary">Ver Clases</button>
-                <button className="btn-primary">¡Inscribirme ahora!</button>
+              <div className="location-details__actions justify-content-center">
+                <HashLink smooth to="/home#form" className="btn-secondary text-decoration-none">
+                  Ver Clases
+                </HashLink>
+                <a href='#' className="btn-primary text-decoration-none">¡Inscribirme ahora!</a>
               </div>
             </div>
           </div>
@@ -159,3 +162,7 @@ const Sedes = () => {
 };
 
 export default Sedes;
+
+
+
+

@@ -1,5 +1,6 @@
 // src/components/BannerSedes.jsx
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/BannerSedes.css';
 import { FaDumbbell, FaRunning, FaMusic, FaUsers } from 'react-icons/fa';
 
@@ -61,7 +62,9 @@ const BannerSedes = () => {
             </ul>
 
             <div className="bs-cta">
-              <a className="bs-cta-button" href="/planes#planes">CONSULTAR PLANES</a>
+              <HashLink smooth to="/planes#planes" className="bs-cta-button">
+                CONSULTAR PLANES
+              </HashLink>
               <p className="bs-cta-note">Contactanos por llamada o WhatsApp y te orientamos.</p>
             </div>
           </div>

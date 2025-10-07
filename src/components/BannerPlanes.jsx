@@ -1,5 +1,6 @@
 // src/components/BannerPlanes.jsx
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/BannerPlanes.css';
 import { BsArrowRightCircleFill } from "react-icons/bs";
 
@@ -11,7 +12,9 @@ const BannerPlanes = () => {
         <p className="banner-planes-description">
           Descubrí nuestros planes diseñados para potenciar tu rendimiento. En RC Gym, creamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!
         </p>
-        <a href="/sedes#sedes" className="banner-planes-cta-button">Conoce todas nuestas sedes</a>
+        <HashLink smooth to="/sedes#sedes" className="banner-planes-cta-button">
+          Conoce todas nuestas sedes
+        </HashLink>
       </div>
 
       <div className="banner-planes-right">

@@ -167,7 +167,7 @@ const Planes = () => {
                     <p className="plan-description">{plan.description}</p>
                   </div>
                 </div>
-                <a href="#" className="plan-button">Quiero este plan</a>
+                <a href="#" target="_blank" className="plan-button">Quiero este plan</a>
               </div>
             ))}
           </div>

@@ -14,9 +14,9 @@ const BannerCoaches = () => {
         <p className="banner-coaches-description">
           LG GYM es la comunidad de fitness más grande de Tucumán. Accedé a todas nuestras sedes y entrená con el equipo de los líderes.
         </p>
-        <button className="banner-coaches-button">
+        <a href="#" className="banner-coaches-button text-decoration-none" target="_blank">
           Agenda tu entrevista gratuita con un entrenador
-        </button>
+        </a>
       </div>
     </div>
   );
