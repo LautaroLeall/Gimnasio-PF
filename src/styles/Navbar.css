@@ -91,7 +91,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 640px) {
-
     /* Ocultar el título grande */
     .title-navbar {
         display: none;
@@ -155,6 +154,8 @@
     .btn-navbar-link:hover,
     .btn-logout:hover {
         transform: none !important;
+        transform: scale(1) !important;
         filter: none !important;
+        border-color: transparent !important;
     }
 }
