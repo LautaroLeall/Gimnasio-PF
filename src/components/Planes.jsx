@@ -14,7 +14,6 @@ const planesData = {
       description: 'Ideal para aquellos que quieren tener su primer acercamiento a la familia RC.',
       isFeatured: false
     },
-
     {
       title: 'TRIMESTRAL',
       subtitle: 'COMPROMISO QUE RINDE',
@@ -22,7 +21,6 @@ const planesData = {
       description: 'Entrená 3 meses con un solo pago. Perfecto para establecer una rutina constante.',
       isFeatured: false
     },
-
     {
       title: 'SEMESTRAL',
       subtitle: 'MEJOR PRECIO-BENEFICIO',
@@ -30,6 +28,7 @@ const planesData = {
       description: 'Plan ideal para quienes ya están decididos a buscar su bienestar. Ahorro y constancia asegurada.',
       isFeatured: true
     }
+
   ],
   'BARRIO SUR': [
     {
@@ -39,7 +38,6 @@ const planesData = {
       description: 'Ideal para aquellos que quieren tener su primer acercamiento a la familia RC.',
       isFeatured: false
     },
-
     {
       title: 'TRIMESTRAL',
       subtitle: 'COMPROMISO QUE RINDE',
@@ -47,7 +45,6 @@ const planesData = {
       description: 'Entrená 3 meses con un solo pago. Perfecto para establecer una rutina constante.',
       isFeatured: false
     },
-
     {
       title: 'ANUAL',
       subtitle: 'LA MEJOR OPCIÓN',
@@ -55,15 +52,16 @@ const planesData = {
       description: 'Máximo ahorro y el mejor compromiso con tu bienestar. Sin interrupciones.',
       isFeatured: true
     }
+
   ],
   'PERON': [
     {
       title: 'MENSUAL',
       subtitle: 'PLAN ESENCIAL',
-      price: '$45.000', description: 'Plan perfecto para empezar y ver resultados.',
+      price: '$45.000',
+      description: 'Plan perfecto para empezar y ver resultados.',
       isFeatured: false
     },
-
     {
       title: 'TRIMESTRAL',
       subtitle: 'COMPROMISO INTENSO',
@@ -71,7 +69,6 @@ const planesData = {
       description: '3 meses de entrenamiento enfocado en tus metas.',
       isFeatured: false
     },
-
     {
       title: 'SEMESTRAL',
       subtitle: 'PLAN ELITE',
@@ -79,6 +76,7 @@ const planesData = {
       description: 'Acceso completo a todas las instalaciones. El plan más popular.',
       isFeatured: true
     }
+
   ],
   'AVENIDA ACONQUIJA': [
     {
@@ -88,7 +86,6 @@ const planesData = {
       description: 'Comienza tu viaje fitness con este plan flexible.',
       isFeatured: false
     },
-
     {
       title: 'TRIMESTRAL',
       subtitle: 'PLAN AVANZADO',
@@ -96,7 +93,6 @@ const planesData = {
       description: 'Da el siguiente paso con este plan que te dará constancia.',
       isFeatured: false
     },
-
     {
       title: 'ANUAL',
       subtitle: 'PLAN TOTAL',
@@ -108,32 +104,27 @@ const planesData = {
 };
 
 const Planes = () => {
-  // sede activa por defecto
-  const [activeSede, setActiveSede] = useState('YERBA BUENA');
-
-  const [mostrarPlans, setMostrarPlans] = useState(true);
+  const [activeSede, setActiveSede] = useState('BARRIO NORTE'); // sede inicial
+  const [mostrarPlanes, setMostrarPlanes] = useState(true);
   const [pendingSede, setPendingSede] = useState(null);
 
-  // Handler para click en pestaña/sede
   const handleSedeClick = (sede) => {
     if (sede === activeSede) return;
-    setMostrarPlans(false);
+    setMostrarPlanes(false);
     setPendingSede(sede);
   };
 
-  // Efecto que realiza el cambio real de sede después de la animación de salida
   useEffect(() => {
-    if (!mostrarPlans && pendingSede !== null) {
+    if (!mostrarPlanes && pendingSede !== null) {
       const timeout = setTimeout(() => {
         setActiveSede(pendingSede);
         setPendingSede(null);
-        setMostrarPlans(true);
-      }, 500); 
+        setMostrarPlanes(true);
+      }, 500); // mismo tiempo que en Sedes
       return () => clearTimeout(timeout);
     }
-  }, [mostrarPlans, pendingSede]);
+  }, [mostrarPlanes, pendingSede]);
 
-  // Planes de la sede actual
   const currentPlanes = planesData[activeSede] || [];
 
   return (
@@ -146,8 +137,8 @@ const Planes = () => {
           <h2 className="main-subtitle">Y CONOCÉ LOS PRECIOS</h2>
         </div>
 
-        {/* Pestañas de sedes */}
-        <div className="location-tabs">
+        {/* Botones de sedes */}
+        <div className="location-tabs my-5">
           {Object.keys(planesData).map((sede) => (
             <button
               key={sede}
@@ -160,14 +151,11 @@ const Planes = () => {
           ))}
         </div>
 
-        {/* Wrapper animado: fade + zoom (mismo patrón) */}
-        <section className={`planes-section fade-zoom-wrapper ${mostrarPlans ? 'fade-in' : 'fade-out'}`}>
-          <div className="planes-cards-container" aria-live="polite">
-            {currentPlanes.map((plan, index) => (
-              <div
-                key={plan.title + index}
-                className={`plan-card ${plan.isFeatured ? 'featured-plan' : ''}`}
-              >
+        {/* Igual animación que Sedes */}
+        <div className={`planes-info-wrapper ${mostrarPlanes ? 'fade-in' : 'fade-out'}`}>
+          <div className="planes-cards-container" aria-hidden={!mostrarPlanes}>
+            {currentPlanes.map((plan, i) => (
+              <div key={plan.title + i} className={`plan-card ${plan.isFeatured ? 'featured-plan' : ''}`}>
                 <div className="plan-content">
                   <div className="plan-header">
                     <h3 className="plan-title">{plan.title}</h3>
@@ -183,7 +171,7 @@ const Planes = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
       </div>
 
       <section className="banner-plan-section mb-5">

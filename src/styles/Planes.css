@@ -1,14 +1,17 @@
 /* src/styles/Planes.css */
 /* Contenedor principal */
 .planes-container-full {
-  padding: 80px 20px;
+  padding: 60px 0px;
   color: #fff;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Titulares */
 .main-title-container {
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .main-title {
@@ -21,14 +24,14 @@
 }
 
 .main-subtitle {
+  color: #18e63b;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #888;
   margin: 10px 0 0;
   letter-spacing: 3px;
 }
 
-/* Pestañas de sedes */
+/* Botones de selección de planes */
 .location-tabs {
   display: flex;
   justify-content: center;
@@ -60,12 +63,31 @@
   color: #fff;
 }
 
+/* Wrapper principal */
+/* cards fade-in / fade-out */
+.planes-info-wrapper {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.planes-info-wrapper.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+.planes-info-wrapper.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Contenedor de tarjetas */
 .planes-section {
   display: flex;
   justify-content: center;
 }
 
-/* Contenedor de tarjetas */
 .planes-cards-container {
   display: flex;
   justify-content: center;
@@ -73,6 +95,7 @@
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
+  align-items: stretch;
 }
 
 /* Tarjeta de plan */
@@ -83,17 +106,30 @@
   background-color: #1a1a1a;
   border-radius: 10px;
   padding: 40px 30px;
-  width: 320px;
   box-sizing: border-box;
   text-align: center;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 400px;
+  min-height: 420px;
+  width: 320px;
+  flex: 1 1 auto;
+  /* permite ajuste responsivo manteniendo igualdad */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .plan-card:hover {
   transform: translateY(-10px);
+}
+
+/* Contenido interior */
+/* para que el footer quede pegado abajo y el cuerpo compense */
+.plan-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .plan-title {
@@ -104,6 +140,7 @@
 }
 
 .plan-subtitle {
+  text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
   color: #888;
@@ -132,9 +169,11 @@
   min-height: 70px;
 }
 
+/* Botón al pie de la card: siempre pegado abajo */
 .plan-button {
-  display: block;
-  color: #10db2b;
+  display: inline-block;
+  color: #16c11c91;
+  background-color: #16c11c0d;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -142,6 +181,7 @@
   border-radius: 5px;
   margin-top: auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: center;
 }
 
 .plan-button:hover {
@@ -170,29 +210,12 @@
 }
 
 .featured-plan .plan-button:hover {
-  color: #10db2b;
+  color: #fff;
+  background-color: #004401;
   text-shadow: 0px 0px 3px rgba(64, 255, 0, 0.8);
 }
 
-/* ANIMACIÓN FADE + ZOOM */
-.fade-zoom-wrapper {
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.fade-zoom-wrapper.fade-out {
-  opacity: 0;
-  transform: scale(0.97);
-  pointer-events: none;
-}
-
-.fade-zoom-wrapper.fade-in {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* RESPONSIVE */
+/* Responsive: en pantallas pequeñas apilamos y ajustamos alturas */
 @media (max-width: 992px) {
   .planes-cards-container {
     flex-direction: column;
@@ -204,6 +227,7 @@
     max-width: 700px;
     padding: 30px;
     min-height: auto;
+    /* permite ajustar verticalmente en móvil */
   }
 
   .plan-price {
